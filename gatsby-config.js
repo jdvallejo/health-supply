@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    pathPrefix: "/health-supply",
     siteUrl: "https://www.yourdomain.tld",
     title: "health-supply",
   },
