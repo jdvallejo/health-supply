@@ -2,6 +2,10 @@
     min-width: 1440px;
 } */
 
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
 .btn-nav .btn {
     border-radius: 25px;
     font-weight: bold;
@@ -29,23 +33,202 @@
     color: white !important;
 }
 
-
 /* .colors {
     background: -moz-linear-gradient(90deg, #DBDCE0 50%, #3A94F6 50%);
     background: -webkit-linear-gradient(90deg, #DBDCE0 50%, #3A94F6 50%);
     background: linear-gradient(90deg, #DBDCE0 50%, #3A94F6 50%);
 } */
 
+.step-nav {
+    background-color: red;
+    margin-top: -5em;
+    z-index: 999;
+
+    background: rgba(255, 255, 255, 0.82);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.09);
+    /* backdrop-filter: blur(17px); */
+    backdrop-filter: blur(15px);
+
+    /* filter: blur(17px);
+    -webkit-filter: blur(17px); */
+
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 16px;
+    padding: 20px 25px;
+    /* border-radius: 15px; */
+    /* background-color: rgba(255, 255, 255, .8); */
+}
+
+.number-step {
+    background-color: #0D84CE;
+    color: #ffffff;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.130682);
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 52px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    justify-content: center;
+
+}
+
+
+.name-step {
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.logos-bar {
+    background-color: #CACFE2;
+    margin-top: -4em;
+    padding-top: 6em;
+}
+
+
 .logo {
     max-width: 190px;
 }
 
-.ht-100 {
-    height: 100vh;
+.logo-img {
+    margin: 0;
+    height: 60px;
 }
 
-@media (max-width: 575.98px) {
-    .ht-100 {
-        height: 80vh;
-    }
+.titulo-home {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: 3.69231px;
+    text-transform: uppercase;
+    color: #333337;
 }
+
+.texto-home {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #333337;
+}
+
+
+.titulo-footer {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: 3.69231px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.subtitulo-footer {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.bg-about {
+    background-image: url("./images/quienes-somos.png");
+    /* height: 500px; */
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 9em 0 5em 0;
+
+}
+
+.bg-red {
+    background-color: #ffffff;
+    padding: 4em;
+}
+
+.card-especialidades {
+    margin-top: -10em;
+    z-index: 999;
+
+}
+
+.titulo-especialidad {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2.15385px;
+    text-transform: uppercase;
+    color: #005082;
+}
+
+.texto-especialidad {
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* or 150% */
+    letter-spacing: 1px;
+    font-feature-settings: 'salt'on, 'liga'off;
+
+    color: #333337;
+}
+
+footer {
+    background-color: #005082;
+    padding: 3em 0;
+}
+
+.contacto-form .form-control {
+    background-color: transparent;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #ffffff;
+}
+
+.btn-enviar {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #005082;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 0;
+}
+
+.btn-enviar:hover {
+    color: #005082;
+    background-color: #ffffff;
+}
+
+
+::placeholder {
+    color: #ffffff !important;
+}
+
+/* @media (max-width: 575.98px) {
+
+} */
