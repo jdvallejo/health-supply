@@ -1,4 +1,6 @@
 import * as React from "react"
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay, Navigation } from "swiper";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -9,6 +11,11 @@ import { StaticImage } from "gatsby-plugin-image";
 import Menu from "../components/Menu"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles.css"
+import "swiper/css";
+import "swiper/css/navigation";
+
+SwiperCore.use([Navigation]);
+SwiperCore.use([Autoplay]);
 
 const IndexPage = () => {
   return (
@@ -165,7 +172,7 @@ const IndexPage = () => {
           <Col md={11} className="card-especialidades">
             <div className="bg-red">
               <Row>
-                <Col md={5}>
+                <Col md={6}>
                   <h3 className="titulo-especialidad">
                     Especialidades
                   </h3>
@@ -173,12 +180,40 @@ const IndexPage = () => {
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, fuga necessitatibus, aliquam dolore accusamus cupiditate esse magnam pariatur odit sit quidem
                   </p>
                 </Col>
+                <Col md={6}>
+                  <Swiper
+                    className="mySwiper"
+                    navigation={true}
+                    slidesPerView={1}
+                    loop={Infinity}
+                    autoplay={true}
+                    pagination={{ clickable: true }}
+                    scrollbar={{ draggable: true }}
+                  >
+                    <SwiperSlide>
+                      <Container>
+                        <Row>
+                          <Col md={6}>
+                            <StaticImage
+                              alt="vw camiones"
+                              src="../images/dentista.png"
+                              className=""
+                              style={{ height: "100%", width: "100%" }}
+                              imgStyle={{ objectFit: "contain" }}
+                            />
+                          </Col>
+                          <Col md={6}>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur id saepe eum reprehenderit reiciendis atque, aliquam eaque dolorum, at consequatur eius earum. Omnis cumque et doloribus repudiandae, iste architecto minima.
+                          </Col>
+                        </Row>
+                      </Container>
+                    </SwiperSlide>
+                  </Swiper>
+                </Col>
               </Row>
             </div>
           </Col>
         </Row>
-
-
 
         <Row>
           <Col md={12}>
@@ -242,11 +277,6 @@ const IndexPage = () => {
             </footer>
           </Col>
         </Row>
-
-
-
-
-
       </Container>
 
     </main>
