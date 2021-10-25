@@ -42,7 +42,7 @@ const Menu = () => {
               imgStyle={{ objectFit: "contain" }}
             />
           </figure> */}
-          <figure className="logo m-0 d-none">
+          <figure className="logo m-0">
             <StaticImage
               alt="vw camiones"
               src="../images/assets/health-supply-logo.png"

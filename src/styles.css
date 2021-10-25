@@ -39,7 +39,7 @@ body {
 }
 
 .menu .nav-link-light.nav-link.active {
-    color: rgba(0,0,0,.7);
+    color: rgba(0, 0, 0, .7);
 }
 
 .menu .nav-link-light.nav-item.dropdown a {
@@ -49,14 +49,14 @@ body {
 }
 
 .menu .nav-link-light.active.nav-item.dropdown a {
-    color: rgba(0,0,0,.7);
+    color: rgba(0, 0, 0, .7);
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
 }
 
 .menu .nav-link-light.nav-item.dropdown .dropdown-item {
     font-family: 'Montserrat', sans-serif;
-    color: rgba(0,0,0,.7);
+    color: rgba(0, 0, 0, .7);
     font-size: 13px;
 }
 
@@ -268,8 +268,8 @@ footer {
     color: #ffffff !important;
 } */
 
-.form-floating > label {
-  color: #ffffff;
+.form-floating>label {
+    color: #ffffff;
 }
 
 
@@ -310,44 +310,48 @@ footer {
     object-fit: cover;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
     color: #005082 !important;
 }
 
 
 @media (max-width: 575.98px) {
-  .nopadding {
-    padding: 0;
-  }
-  /* .step-nav {
+
+    /* .nopadding {
+        padding: 0;
+    }
+ */
+    /* .step-nav {
     margin: 20px;
   } */
-  .number-step {
-    background-color: #0D84CE;
-    color: #ffffff;
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.130682);
-    font-family: Quicksand;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 52px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 2px;
-    justify-content: center;
-}
-.logo-img {
-  padding: 12px;
-}
+    .number-step {
+        background-color: #0D84CE;
+        color: #ffffff;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.130682);
+        font-family: Quicksand;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 52px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+        justify-content: center;
+    }
 
-.bg-card {
-  background-color: #ffffff;
-  padding: 1em;
-}
+    .logo-img {
+        padding: 12px;
+    }
+
+    .bg-card {
+        background-color: #ffffff;
+        padding: 1em;
+    }
 
 }

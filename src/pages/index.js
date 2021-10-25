@@ -188,7 +188,7 @@ const IndexPage = () => {
                     Especialidades
                   </h3>
                   <p className="texto-especialidad">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, fuga necessitatibus, aliquam dolore accusamus cupiditate esse magnam pariatur odit sit quidem
+                    Te podemos proveer de todas las medicinas de la especialidad de "nombre de la especialidad" como medicamento 1, medicamento 2, medicamento 3, medicamento 4
                   </p>
                 </Col>
                 <Col md={7}>
