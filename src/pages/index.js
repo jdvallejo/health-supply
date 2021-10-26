@@ -1,6 +1,6 @@
-import * as React from "react"
-import Formulario from "../components/Formulario"
-import Footer from "../components/Footer"
+import * as React from "react";
+import Formulario from "../components/Formulario";
+import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper";
 import Container from "react-bootstrap/Container";
@@ -10,12 +10,12 @@ import Card from "react-bootstrap/Card";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import { StaticImage } from "gatsby-plugin-image";
-import Menu from "../components/Menu"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "../styles.css"
+import Menu from "../components/Menu";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles.css";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination"
+import "swiper/css/pagination";
 
 SwiperCore.use([Autoplay]);
 SwiperCore.use([Navigation]);
@@ -48,16 +48,20 @@ const IndexPage = () => {
           <Col xs={11} md={11} className="step-nav">
             <Row>
               <Col md={3} className="d-flex align-items-center mt-2">
-                <span className="number-step">1</span><h2 className="name-step">Te ofrecemos la mejor opción</h2>
+                <span className="number-step">1</span>
+                <h2 className="name-step">Envía tu consulta</h2>
               </Col>
               <Col md={3} className="d-flex align-items-center mt-2">
-                <span className="number-step">2</span><h2 className="name-step">Cotiza tu medicamento</h2>
+                <span className="number-step">2</span>
+                <h2 className="name-step">Te enviamos la mejor opción 3</h2>
               </Col>
               <Col md={3} className="d-flex align-items-center mt-2">
-                <span className="number-step">3</span><h2 className="name-step">Recibes la oferta</h2>
+                <span className="number-step">3</span>
+                <h2 className="name-step">Confirmas el Pedido</h2>
               </Col>
               <Col md={3} className="d-flex align-items-center mt-2">
-                <span className="number-step">4</span><h2 className="name-step">Recibes tu medicamento</h2>
+                <span className="number-step">4</span>
+                <h2 className="name-step">Enviamos el Medicamento</h2>
               </Col>
             </Row>
           </Col>
@@ -115,14 +119,14 @@ const IndexPage = () => {
             />
           </Col>
           <Col md={5} className="my-auto">
-            <h2 className="titulo-home text-md-end">
-              HEALTHSUPLY EN EL MUNDO
-            </h2>
+            <h2 className="titulo-home text-md-end">HEALTHSUPLY EN EL MUNDO</h2>
             <p className="texto-home text-md-end mt-4">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, possimus in non, rem corrupti atque aliquid esse necessitatibus, sunt nemo error numquam est quae quam. Odit illum omnis voluptate iste.
-            </p>
-            <p className="texto-home text-md-end">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, odit suscipit aperiam alias fugit laudantium magnam quo pariatur, cum itaque labore soluta veniam ipsum nam officia eum unde quis dolorum.
+              Health Supply, reduce la brecha entre las necesidades de pacientes
+              y la oferta de tratamientos, para esto contamos con una amplia red
+              de distribuidores y laboratorios asociados con presencia en 4
+              cuatro continentes y más de 18 países, por lo que nuestra
+              fortaleza es ofrecer una todo tipo de medicamentos, especialmente
+              aquellos de difíciles de encontrar en países emergentes.
             </p>
           </Col>
         </Row>
@@ -132,14 +136,21 @@ const IndexPage = () => {
             <div className="bg-about">
               <Row className="d-flex justify-content-center">
                 <Col md={4} className="my-auto">
-                  <h2 className="titulo-home text-start">
-                    QUIENES SOMOS
-                  </h2>
+                  <h2 className="titulo-home text-start">QUIENES SOMOS</h2>
                   <p className="texto-home text-start mt-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, possimus in non, rem corrupti atque aliquid esse necessitatibus, sunt nemo error numquam est quae quam. Odit illum omnis voluptate iste.
+                    Con más de 20 años de experiencia en el mercado farmacéutico
+                    y especialmente en el área Oncológica, se evidenció que en
+                    países emergentes, no se podían realizar el 100% de los
+                    tratamientos indicados a pacientes por falta de acceso a
+                    medicamentos. En el 2007 HSP es fundada, con el objetivo de
+                    ofrecer productos no disponibles en países emergentes a
+                    pacientes de enfermedades graves.
                   </p>
                   <p className="texto-home text-start">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, odit suscipit aperiam alias fugit laudantium magnam quo pariatur, cum itaque labore soluta veniam ipsum nam officia eum unde quis dolorum.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Eveniet, odit suscipit aperiam alias fugit laudantium magnam
+                    quo pariatur, cum itaque labore soluta veniam ipsum nam
+                    officia eum unde quis dolorum.
                   </p>
                 </Col>
                 <Col md={1}></Col>
@@ -169,9 +180,10 @@ const IndexPage = () => {
               />
               <Card.ImgOverlay>
                 <div className="texto-tarjeta mt-md-5 ms-md-5">
-                  <Card.Title>Medicina  a un click</Card.Title>
+                  <Card.Title>Medicina a un click</Card.Title>
                   <Card.Text>
-                    Mira  nuestro ámplio caltálogo <br /> de medicinas de primer nivel.
+                    Mira nuestro ámplio caltálogo <br /> de medicinas de primer
+                    nivel.
                   </Card.Text>
                 </div>
               </Card.ImgOverlay>
@@ -184,11 +196,11 @@ const IndexPage = () => {
             <div className="bg-card shadow">
               <Row>
                 <Col md={5} className="my-auto">
-                  <h3 className="titulo-especialidad">
-                    Especialidades
-                  </h3>
+                  <h3 className="titulo-especialidad">Especialidades</h3>
                   <p className="texto-especialidad">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, fuga necessitatibus, aliquam dolore accusamus cupiditate esse magnam pariatur odit sit quidem
+                    Te podemos proveer de todas las medicinas de la especialidad
+                    de "nombre de la especialidad" como medicamento 1,
+                    medicamento 2, medicamento 3, medicamento 4
                   </p>
                 </Col>
                 <Col md={7}>
@@ -216,11 +228,12 @@ const IndexPage = () => {
                             </figure>
                           </Col>
                           <Col md={7} className="my-auto">
-                            <h3 className="titulo-especialidad">
-                              Odontología
-                            </h3>
+                            <h3 className="titulo-especialidad">Odontología</h3>
                             <p className="texto-especialidad">
-                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur id saepe eum reprehenderit reiciendis atque, aliquam eaque dolorum.
+                              Lorem, ipsum dolor sit amet consectetur
+                              adipisicing elit. Pariatur id saepe eum
+                              reprehenderit reiciendis atque, aliquam eaque
+                              dolorum.
                             </p>
                           </Col>
                         </Row>
@@ -253,12 +266,39 @@ const IndexPage = () => {
                             <SwiperSlide className="px-5 py-2">
                               <Container className="p-3">
                                 <Row className="shadow rounded-3">
-                                  <Col md={12} className="my-auto p-4">
-                                    <h3 className="titulo-slider-testi">
+                                  <Col md={12} className="my-auto p-4 pmd-5">
+                                    <h3 className="titulo-home-spec">
                                       Productos de primera
                                     </h3>
                                     <p className="texto-testimonio">
-                                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit. Auctor neque sed
+                                      imperdiet nibh lectus feugiat nunc sem.
+                                    </p>
+                                    {/* <figure className="p-4">
+                                      <StaticImage
+                                        alt="vw camiones"
+                                        src="../images/dentista.png"
+                                        className="img-testimonio"
+                                        style={{ height: "100%", width: "100%" }}
+                                        imgStyle={{ objectFit: "contain" }}
+                                      />
+                                    </figure> */}
+                                  </Col>
+                                </Row>
+                              </Container>
+                            </SwiperSlide>
+                            <SwiperSlide className="px-5 py-2">
+                              <Container className="p-3">
+                                <Row className="shadow rounded-3">
+                                  <Col md={12} className="my-auto p-4 pmd-5">
+                                    <h3 className="titulo-home-spec">
+                                      100% Recomendado
+                                    </h3>
+                                    <p className="texto-testimonio">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit. Auctor neque sed
+                                      imperdiet nibh lectus feugiat nunc sem.
                                     </p>
                                     {/* <figure className="p-4">
                                       <StaticImage
@@ -276,12 +316,15 @@ const IndexPage = () => {
                           </Swiper>
                         </Col>
                         <Col md={5} className="my-auto">
-                          <h3 className="titulo-testimonios">
+                          <h3 className="titulo-testimonio text-end">
                             Testimonios
                           </h3>
-                          <p className="texto-testimonio">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta officiis quasi eaque cupiditate totam unde illo commodi earum iste pariatur,
-                            asperiores explicabo quod facere esse facilis consectetur ullam est architecto?
+                          <p className="texto-testimonio text-end">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Dicta officiis quasi eaque cupiditate totam
+                            unde illo commodi earum iste pariatur, asperiores
+                            explicabo quod facere esse facilis consectetur ullam
+                            est architecto?
                           </p>
                         </Col>
                       </Row>
@@ -300,7 +343,7 @@ const IndexPage = () => {
       <Formulario />
       <Footer />
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
