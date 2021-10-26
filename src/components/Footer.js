@@ -7,11 +7,11 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => {
   return (
-    <Container>
+    <Container className="px-2">
       <Row>
         <Col md={12}>
-          <div className="bg-blue">
-            <Container>
+          <div>
+            <Container className="px-0">
               <Row>
                 <Col md={4} className="border-footer d-flex align-items-center">
                   <div>
@@ -54,6 +54,12 @@ const Footer = () => {
               </Row>
             </Container>
           </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={12} className="text-center mt-3">
+          <p className="copyright text-uppercase mb-1">Health Supply</p>
+          <p className="copyright">All rights reserved. Copyright © 2021</p>
         </Col>
       </Row>
     </Container>

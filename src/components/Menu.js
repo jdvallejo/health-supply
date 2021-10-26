@@ -5,9 +5,12 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import Image from "react-bootstrap/Image";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import logo1 from "../images/assets/health-supply-logo.png"
+import logo2 from "../images/assets/health-supply-logo-white.png"
 
 const Menu = () => {
   const [navbar, setNavbar] = useState(false);
@@ -23,30 +26,30 @@ const Menu = () => {
   if (typeof window !== `undefined`) {
     window.addEventListener("scroll", changeBackground);
   }
-
   return (
     <Navbar expand="lg" className={navbar ? "menu active" : "menu"} fixed="top">
       <Container className="px-3 px-md-4">
         <Navbar.Brand as={Link} to="/" className="ms-3">
-          {/* <figure className="logo m-0 d-block d-sm-none">
-            <StaticImage
-              alt="vw camiones"
-              src="../images/assets/health-supply-logo-white.png"
-              style={{ height: "100%", width: "100%" }}
-              imgStyle={{ objectFit: "contain" }}
+          <figure className="logo m-0 d-block d-sm-none">
+            <Image
+              alt="healthy supply"
+              src={navbar ? `${logo1}` : `${logo2}`}
+              fluid
+              /* src="../images/assets/health-supply-logo-white.png" */
             />
-          </figure> */}
+          </figure>
           {/* <figure className="logo m-0 d-none d-sm-block">
             <StaticImage
-              alt="vw camiones"
+              alt="healthy supply"
               src="../images/assets/health-supply-logo.png"
               style={{ height: "100%", width: "100%" }}
               imgStyle={{ objectFit: "contain" }}
             />
           </figure> */}
-          <figure className="logo m-0">
+          <figure className="logo m-0 d-none d-sm-block">
             <StaticImage
-              alt="vw camiones"
+              alt="healthy supply"
+              /* src={navbar ? "../images/assets/health-supply-logo.png" : "../images/assets/health-supply-logo-white.png"} */
               src="../images/assets/health-supply-logo.png"
               style={{ height: "100%", width: "100%" }}
               imgStyle={{ objectFit: "contain" }}

@@ -25,9 +25,9 @@ const IndexPage = () => {
   return (
     <main>
       <Menu />
-      <Container className="colors">
+      <Container fluid className="colors">
         <Row>
-          <Col md={12} className="nopadding">
+          <Col md={12} className="px-0">
             <StaticImage
               alt="vw camiones"
               src="../images/health-supply-banner-xs.png"
@@ -44,6 +44,7 @@ const IndexPage = () => {
             />
           </Col>
         </Row>
+
         <Row className="d-flex justify-content-center">
           <Col xs={11} md={11} className="step-nav">
             <Row>
@@ -53,7 +54,7 @@ const IndexPage = () => {
               </Col>
               <Col md={3} className="d-flex align-items-center mt-2">
                 <span className="number-step">2</span>
-                <h2 className="name-step">Te enviamos la mejor opción 3</h2>
+                <h2 className="name-step">Te enviamos la mejor opción</h2>
               </Col>
               <Col md={3} className="d-flex align-items-center mt-2">
                 <span className="number-step">3</span>
@@ -119,7 +120,9 @@ const IndexPage = () => {
             />
           </Col>
           <Col md={5} className="my-auto">
-            <h2 className="titulo-home text-md-end">HEALTHSUPLY EN EL MUNDO</h2>
+            <h2 className="titulo-home text-md-end mt-3 mt-md-0">
+              HEALTHSUPLY EN EL MUNDO
+            </h2>
             <p className="texto-home text-md-end mt-4">
               Health Supply, reduce la brecha entre las necesidades de pacientes
               y la oferta de tratamientos, para esto contamos con una amplia red
@@ -167,7 +170,8 @@ const IndexPage = () => {
             </div>
           </Col>
         </Row>
-
+      </Container>
+      <Container>
         <Row>
           <Col md={12}>
             <Card className="text-white rounded-0 border-0">
@@ -180,11 +184,13 @@ const IndexPage = () => {
               />
               <Card.ImgOverlay>
                 <div className="texto-tarjeta mt-md-5 ms-md-5">
-                  <Card.Title>Medicina a un click</Card.Title>
-                  <Card.Text>
+                  <h3 className="titulo-home text-light">
+                    Medicina para todos
+                  </h3>
+                  <p className="texto-especialidades">
                     Mira nuestro ámplio caltálogo <br /> de medicinas de primer
                     nivel.
-                  </Card.Text>
+                  </p>
                 </div>
               </Card.ImgOverlay>
             </Card>
@@ -198,9 +204,8 @@ const IndexPage = () => {
                 <Col md={5} className="my-auto">
                   <h3 className="titulo-especialidad">Especialidades</h3>
                   <p className="texto-especialidad">
-                    Te podemos proveer de todas las medicinas de la especialidad
-                    de "nombre de la especialidad" como medicamento 1,
-                    medicamento 2, medicamento 3, medicamento 4
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+                    accusantium tenetur neque voluptatem.
                   </p>
                 </Col>
                 <Col md={7}>
@@ -213,8 +218,8 @@ const IndexPage = () => {
                     pagination={{ clickable: true }}
                     scrollbar={{ draggable: true }}
                   >
-                    <SwiperSlide className="px-5 py-2">
-                      <Container className="p-3">
+                    <SwiperSlide className="px-4 px-md-5 py-2">
+                      <Container className="p-3 mb-3">
                         <Row className="shadow rounded-3">
                           <Col md={5} className="my-auto">
                             <figure className="p-4">
@@ -228,12 +233,169 @@ const IndexPage = () => {
                             </figure>
                           </Col>
                           <Col md={7} className="my-auto">
-                            <h3 className="titulo-especialidad">Odontología</h3>
+                            <h3 className="titulo-especialidad">Oncología</h3>
                             <p className="texto-especialidad">
-                              Lorem, ipsum dolor sit amet consectetur
-                              adipisicing elit. Pariatur id saepe eum
-                              reprehenderit reiciendis atque, aliquam eaque
-                              dolorum.
+                              Te podemos proveer de todas las medicinas de la
+                              especialidad de oncología como Padcev, Margenza,
+                              Stivarga y Enhertu.
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </SwiperSlide>
+                    <SwiperSlide className="px-4 px-md-5 py-2">
+                      <Container className="p-3 mb-3">
+                        <Row className="shadow rounded-3">
+                          <Col md={5} className="my-auto">
+                            <figure className="p-4">
+                              <StaticImage
+                                alt="vw camiones"
+                                src="../images/dentista.png"
+                                className=""
+                                style={{ height: "100%", width: "100%" }}
+                                imgStyle={{ objectFit: "contain" }}
+                              />
+                            </figure>
+                          </Col>
+                          <Col md={7} className="my-auto">
+                            <h3 className="titulo-especialidad">
+                              Dermatología
+                            </h3>
+                            <p className="texto-especialidad">
+                              Te podemos proveer de todas las medicinas de la
+                              especialidad de dermatología como Vascepa,
+                              Takhzyro y Cibinqo.
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </SwiperSlide>
+                    <SwiperSlide className="px-4 px-md-5 py-2">
+                      <Container className="p-3 mb-3">
+                        <Row className="shadow rounded-3">
+                          <Col md={5} className="my-auto">
+                            <figure className="p-4">
+                              <StaticImage
+                                alt="vw camiones"
+                                src="../images/dentista.png"
+                                className=""
+                                style={{ height: "100%", width: "100%" }}
+                                imgStyle={{ objectFit: "contain" }}
+                              />
+                            </figure>
+                          </Col>
+                          <Col md={7} className="my-auto">
+                            <h3 className="titulo-especialidad">Hepatología</h3>
+                            <p className="texto-especialidad">
+                              Te podemos proveer de todas las medicinas de la
+                              especialidad de hepatología como Tavneos,
+                              Palynziq, Waylivra.
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </SwiperSlide>
+                    <SwiperSlide className="px-4 px-md-5 py-2">
+                      <Container className="p-3 mb-3">
+                        <Row className="shadow rounded-3">
+                          <Col md={5} className="my-auto">
+                            <figure className="p-4">
+                              <StaticImage
+                                alt="vw camiones"
+                                src="../images/dentista.png"
+                                className=""
+                                style={{ height: "100%", width: "100%" }}
+                                imgStyle={{ objectFit: "contain" }}
+                              />
+                            </figure>
+                          </Col>
+                          <Col md={7} className="my-auto">
+                            <h3 className="titulo-especialidad">
+                              Infecciología
+                            </h3>
+                            <p className="texto-especialidad">
+                              Te podemos proveer de todas las medicinas de la
+                              especialidad de infecciología como Pifeltro,
+                              Tamiflu, Azithromycin y Veklury.
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </SwiperSlide>
+                    <SwiperSlide className="px-4 px-md-5 py-2">
+                      <Container className="p-3 mb-3">
+                        <Row className="shadow rounded-3">
+                          <Col md={5} className="my-auto">
+                            <figure className="p-4">
+                              <StaticImage
+                                alt="vw camiones"
+                                src="../images/dentista.png"
+                                className=""
+                                style={{ height: "100%", width: "100%" }}
+                                imgStyle={{ objectFit: "contain" }}
+                              />
+                            </figure>
+                          </Col>
+                          <Col md={7} className="my-auto">
+                            <h3 className="titulo-especialidad">Neurología</h3>
+                            <p className="texto-especialidad">
+                              Te podemos proveer de todas las medicinas de la
+                              especialidad de neurología como edaravone, Amondys
+                              45, Fycompa y Austedo.
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </SwiperSlide>
+                    <SwiperSlide className="px-4 px-md-5 py-2">
+                      <Container className="p-3 mb-3">
+                        <Row className="shadow rounded-3">
+                          <Col md={5} className="my-auto">
+                            <figure className="p-4">
+                              <StaticImage
+                                alt="vw camiones"
+                                src="../images/dentista.png"
+                                className=""
+                                style={{ height: "100%", width: "100%" }}
+                                imgStyle={{ objectFit: "contain" }}
+                              />
+                            </figure>
+                          </Col>
+                          <Col md={7} className="my-auto">
+                            <h3 className="titulo-especialidad">
+                              Pulmonología
+                            </h3>
+                            <p className="texto-especialidad">
+                              Te podemos proveer de todas las medicinas de la
+                              especialidad de pulmonología como Tavneos,
+                              Kaftrio, Yupelri y Trelegy Ellipta.
+                            </p>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </SwiperSlide>
+                    <SwiperSlide className="px-4 px-md-5 py-2">
+                      <Container className="p-3 mb-3">
+                        <Row className="shadow rounded-3">
+                          <Col md={5} className="my-auto">
+                            <figure className="p-4">
+                              <StaticImage
+                                alt="vw camiones"
+                                src="../images/dentista.png"
+                                className=""
+                                style={{ height: "100%", width: "100%" }}
+                                imgStyle={{ objectFit: "contain" }}
+                              />
+                            </figure>
+                          </Col>
+                          <Col md={7} className="my-auto">
+                            <h3 className="titulo-especialidad">
+                              Reumatología
+                            </h3>
+                            <p className="texto-especialidad">
+                              Te podemos proveer de todas las medicinas de la
+                              especialidad de reumatología como Vascepa,
+                              Cosentyx, Rinvoq y Jyseleca.
                             </p>
                           </Col>
                         </Row>
@@ -249,7 +411,7 @@ const IndexPage = () => {
         <Row className="d-flex justify-content-center pt-3">
           <Col md={11} className="py-4 py-md-5">
             <Row>
-              <Col md={12}>
+              <Col md={12} className="testimonios-tab">
                 <Tabs defaultActiveKey="pacientes" className="mb-3">
                   <Tab eventKey="pacientes" title="PACIENTES">
                     <Container className="px-0">
@@ -263,8 +425,8 @@ const IndexPage = () => {
                             // autoplay={true}
                             scrollbar={{ draggable: true }}
                           >
-                            <SwiperSlide className="px-5 py-2">
-                              <Container className="p-3">
+                            <SwiperSlide className="px-2 px-md-5 py-2">
+                              <Container className="p-3 mb-3">
                                 <Row className="shadow rounded-3">
                                   <Col md={12} className="my-auto p-4 pmd-5">
                                     <h3 className="titulo-home-spec">
@@ -288,8 +450,8 @@ const IndexPage = () => {
                                 </Row>
                               </Container>
                             </SwiperSlide>
-                            <SwiperSlide className="px-5 py-2">
-                              <Container className="p-3">
+                            <SwiperSlide className="px-2 px-md-5 py-2">
+                              <Container className="p-3 mb-3">
                                 <Row className="shadow rounded-3">
                                   <Col md={12} className="my-auto p-4 pmd-5">
                                     <h3 className="titulo-home-spec">
@@ -316,7 +478,7 @@ const IndexPage = () => {
                           </Swiper>
                         </Col>
                         <Col md={5} className="my-auto">
-                          <h3 className="titulo-testimonio text-end">
+                          <h3 className="titulo-home-spec text-end">
                             Testimonios
                           </h3>
                           <p className="texto-testimonio text-end">
@@ -331,7 +493,83 @@ const IndexPage = () => {
                     </Container>
                   </Tab>
                   <Tab eventKey="instituciones" title="INSTITUCIONES">
-                    chamo
+                    <Container className="px-0">
+                      <Row>
+                        <Col md={7}>
+                          <Swiper
+                            className="mySwiper py-3"
+                            pagination={{ clickable: true }}
+                            slidesPerView={1}
+                            loop={Infinity}
+                            // autoplay={true}
+                            scrollbar={{ draggable: true }}
+                          >
+                            <SwiperSlide className="px-4 px-md-5 py-2">
+                              <Container className="p-3 mb-3">
+                                <Row className="shadow rounded-3">
+                                  <Col md={12} className="my-auto p-4 pmd-5">
+                                    <h3 className="titulo-home-spec">
+                                      Productos de primera
+                                    </h3>
+                                    <p className="texto-testimonio">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit. Auctor neque sed
+                                      imperdiet nibh lectus feugiat nunc sem.
+                                    </p>
+                                    {/* <figure className="p-4">
+                                      <StaticImage
+                                        alt="vw camiones"
+                                        src="../images/dentista.png"
+                                        className="img-testimonio"
+                                        style={{ height: "100%", width: "100%" }}
+                                        imgStyle={{ objectFit: "contain" }}
+                                      />
+                                    </figure> */}
+                                  </Col>
+                                </Row>
+                              </Container>
+                            </SwiperSlide>
+                            <SwiperSlide className="px-4 px-md-5 py-2">
+                              <Container className="p-3 mb-3">
+                                <Row className="shadow rounded-3">
+                                  <Col md={12} className="my-auto p-4 pmd-5">
+                                    <h3 className="titulo-home-spec">
+                                      100% Recomendado
+                                    </h3>
+                                    <p className="texto-testimonio">
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit. Auctor neque sed
+                                      imperdiet nibh lectus feugiat nunc sem.
+                                    </p>
+                                    {/* <figure className="p-4">
+                                      <StaticImage
+                                        alt="vw camiones"
+                                        src="../images/dentista.png"
+                                        className="img-testimonio"
+                                        style={{ height: "100%", width: "100%" }}
+                                        imgStyle={{ objectFit: "contain" }}
+                                      />
+                                    </figure> */}
+                                  </Col>
+                                </Row>
+                              </Container>
+                            </SwiperSlide>
+                          </Swiper>
+                        </Col>
+                        <Col md={5} className="my-auto">
+                          <h3 className="titulo-home-spec text-end">
+                            Testimonios
+                          </h3>
+                          <p className="texto-testimonio text-end">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Dicta officiis quasi eaque cupiditate totam
+                            unde illo commodi earum iste pariatur, asperiores
+                            explicabo quod facere esse facilis consectetur ullam
+                            est architecto?
+                          </p>
+                        </Col>
+                      </Row>
+                    </Container>
                   </Tab>
                 </Tabs>
               </Col>
@@ -340,8 +578,18 @@ const IndexPage = () => {
         </Row>
       </Container>
 
-      <Formulario />
-      <Footer />
+      <Container fluid className="bg-blue">
+        <Row>
+          <Col md={12}>
+            <Formulario />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={12}>
+            <Footer />
+          </Col>
+        </Row>
+      </Container>
     </main>
   );
 };
