@@ -38,7 +38,7 @@ body {
 }
 
 .menu .nav-link-light.nav-link.active {
-  color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, .7);
 }
 
 .menu .nav-link-light.nav-item.dropdown a {
@@ -48,15 +48,15 @@ body {
 }
 
 .menu .nav-link-light.active.nav-item.dropdown a {
-  color: rgba(0, 0, 0, 0.7);
-  font-family: "Montserrat", sans-serif;
-  font-size: 13px;
+    color: rgba(0, 0, 0, .7);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
 }
 
 .menu .nav-link-light.nav-item.dropdown .dropdown-item {
-  font-family: "Montserrat", sans-serif;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(0, 0, 0, .7);
+    font-size: 13px;
 }
 
 /* .menu .nav-link-light.nav-item.dropdown {
@@ -289,8 +289,8 @@ footer {
     color: #ffffff !important;
 } */
 
-.form-floating > label {
-  color: #ffffff;
+.form-floating>label {
+    color: #ffffff;
 }
 
 /****** Swiper ******/
