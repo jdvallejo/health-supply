@@ -30,7 +30,7 @@ const Footer = () => {
                     </p>
                   </div>
                 </Col>
-                <Col md={4} className="border-footer d-flex align-items-center">
+                <Col md={4} className="border-footer d-flex align-items-center mt-3 mt-md-0">
                   <div className="">
                     <h3 className="name-list-footer">Site</h3>
                     <ListGroup horizontal className="list-footer">
@@ -41,7 +41,10 @@ const Footer = () => {
                     </ListGroup>
                   </div>
                 </Col>
-                <Col md={4} className="border-footer d-flex align-items-center">
+                <Col
+                  md={4}
+                  className="border-footer d-flex align-items-center mt-3 mt-md-0"
+                >
                   <div className="">
                     <h3 className="name-list-footer">Social</h3>
                     <ListGroup horizontal className="list-footer">

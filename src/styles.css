@@ -12,7 +12,6 @@ body {
 
 .btn-nav .btn {
   border-radius: 25px;
-  font-weight: bold;
 }
 
 .fixed-top.active {
@@ -30,7 +29,7 @@ body {
   line-height: 16px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-right: 16px;
+  margin-right: 37px;
 }
 
 .menu .nav-link-light.nav-link {
@@ -54,11 +53,35 @@ body {
 }
 
 .menu .nav-link-light.nav-item.dropdown .dropdown-item {
-  font-family: "Montserrat", sans-serif;
   color: rgba(0, 0, 0, 0.7);
-  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
 }
 
+.menu .dropdown-item {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-right: 37px;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+.titulo-pasos {
+  color: #333337;
+  font-family: "Montserrat", sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 3.69231px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+}
 /* .menu .nav-link-light.nav-item.dropdown {
     color: white;
 } */
@@ -95,6 +118,22 @@ body {
   padding: 20px 25px;
   /* border-radius: 15px; */
   /* background-color: rgba(255, 255, 255, .8); */
+}
+
+.btn-contacto {
+  color: #005082;
+  background-color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 3px;
+}
+
+.btn-contacto-hover {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 3px;
 }
 
 .number-step {
@@ -401,6 +440,26 @@ footer {
   border-bottom: 2px solid #005082;
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #ffffff;
+    padding: 12px;
+  }
+  .menu .navbar-collapse .nav-link-light.nav-item.dropdown a {
+    color: rgba(0, 0, 0, 0.7);
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+  }
+  .menu .nav-link-light.nav-link {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .btn-contacto {
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    color: #6c757d;
+  }
+}
+
 @media (max-width: 575.98px) {
   /* .nopadding {
         padding: 0;
@@ -464,6 +523,7 @@ footer {
     text-transform: uppercase;
     color: #ffffff;
     font-size: 13px;
+    margin-bottom: 0;
   }
 
   .list-footer {
@@ -479,10 +539,26 @@ footer {
   }
 
   .titulo-home {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .titulo-home-spec {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .titulo-pasos {
+    font-size: 16px;
+  }
+  .copyright {
+    font-size: 13px;
+  }
+
+  .texto-home,
+  .texto-testimonio {
+    font-size: 14px;
+  }
+
+  .nav-tabs .nav-link,
+  .nav-tabs .nav-link.active {
+    font-size: 14px;
   }
 }

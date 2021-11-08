@@ -27,7 +27,7 @@ const Menu = () => {
     window.addEventListener("scroll", changeBackground);
   }
   return (
-    <Navbar expand="lg" className={navbar ? "menu active" : "menu"} fixed="top">
+    <Navbar expand="lg" className={navbar ? "menu active shadow" : "menu"} fixed="top">
       <Container className="px-3 px-md-4">
         <Navbar.Brand as={Link} to="/" className="ms-3">
           <figure className="logo m-0 d-block d-sm-none">
@@ -35,7 +35,7 @@ const Menu = () => {
               alt="healthy supply"
               src={navbar ? `${logo1}` : `${logo2}`}
               fluid
-              /* src="../images/assets/health-supply-logo-white.png" */
+            /* src="../images/assets/health-supply-logo-white.png" */
             />
           </figure>
           {/* <figure className="logo m-0 d-none d-sm-block">
@@ -100,8 +100,8 @@ const Menu = () => {
             </NavDropdown>
           </Nav>
           <Form className="d-flex btn-nav">
-            <Button variant="outline-success me-3">Whatsapp</Button>
-            <Button variant={navbar ? "outline-secondary" : "outline-light"}>
+            {/* <Button variant="outline-success me-3">Whatsapp</Button> */}
+            <Button variant={navbar ? "outline-secondary btn-contacto-hover px-3" : "outline-light btn-contacto px-3"}>
               Contactarnos
             </Button>
           </Form>

@@ -48,6 +48,14 @@ const IndexPage = () => {
         <Row className="d-flex justify-content-center">
           <Col xs={11} md={11} className="step-nav">
             <Row>
+              <Col>
+                <h2 className="titulo-pasos">
+                  TU MEDICINA A SOLO PASOS
+                </h2>
+              </Col>
+            </Row>
+
+            <Row>
               <Col md={3} className="d-flex align-items-center mt-2">
                 <span className="number-step">1</span>
                 <h2 className="name-step">Envía tu consulta</h2>
@@ -225,7 +233,7 @@ const IndexPage = () => {
                             <figure className="p-4">
                               <StaticImage
                                 alt="vw camiones"
-                                src="../images/dentista.png"
+                                src="../images/especialidades/oncologia.png"
                                 className=""
                                 style={{ height: "100%", width: "100%" }}
                                 imgStyle={{ objectFit: "contain" }}
@@ -250,7 +258,7 @@ const IndexPage = () => {
                             <figure className="p-4">
                               <StaticImage
                                 alt="vw camiones"
-                                src="../images/dentista.png"
+                                src="../images/especialidades/dermatologia.png"
                                 className=""
                                 style={{ height: "100%", width: "100%" }}
                                 imgStyle={{ objectFit: "contain" }}
@@ -277,7 +285,7 @@ const IndexPage = () => {
                             <figure className="p-4">
                               <StaticImage
                                 alt="vw camiones"
-                                src="../images/dentista.png"
+                                src="../images/especialidades/hepatologia.png"
                                 className=""
                                 style={{ height: "100%", width: "100%" }}
                                 imgStyle={{ objectFit: "contain" }}
@@ -295,14 +303,14 @@ const IndexPage = () => {
                         </Row>
                       </Container>
                     </SwiperSlide>
-                    <SwiperSlide className="px-4 px-md-5 py-2">
+                    {/* <SwiperSlide className="px-4 px-md-5 py-2">
                       <Container className="p-3 mb-3">
                         <Row className="shadow rounded-3">
                           <Col md={5} className="my-auto">
                             <figure className="p-4">
                               <StaticImage
                                 alt="vw camiones"
-                                src="../images/dentista.png"
+                                src="../images/especialidades/infecciologia.png"
                                 className=""
                                 style={{ height: "100%", width: "100%" }}
                                 imgStyle={{ objectFit: "contain" }}
@@ -321,7 +329,7 @@ const IndexPage = () => {
                           </Col>
                         </Row>
                       </Container>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                     <SwiperSlide className="px-4 px-md-5 py-2">
                       <Container className="p-3 mb-3">
                         <Row className="shadow rounded-3">
@@ -329,7 +337,7 @@ const IndexPage = () => {
                             <figure className="p-4">
                               <StaticImage
                                 alt="vw camiones"
-                                src="../images/dentista.png"
+                                src="../images/especialidades/neurologia.png"
                                 className=""
                                 style={{ height: "100%", width: "100%" }}
                                 imgStyle={{ objectFit: "contain" }}
@@ -354,7 +362,7 @@ const IndexPage = () => {
                             <figure className="p-4">
                               <StaticImage
                                 alt="vw camiones"
-                                src="../images/dentista.png"
+                                src="../images/especialidades/pulmonologia.png"
                                 className=""
                                 style={{ height: "100%", width: "100%" }}
                                 imgStyle={{ objectFit: "contain" }}
@@ -381,7 +389,7 @@ const IndexPage = () => {
                             <figure className="p-4">
                               <StaticImage
                                 alt="vw camiones"
-                                src="../images/dentista.png"
+                                src="../images/especialidades/reumatologia.png"
                                 className=""
                                 style={{ height: "100%", width: "100%" }}
                                 imgStyle={{ objectFit: "contain" }}
