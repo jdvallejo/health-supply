@@ -15,10 +15,10 @@ const Formulario = () => {
             <Row>
               <Col md={12} className="text-center">
                 <h3 className="titulo-footer">
-                  Tus pensamientos son importantes
+                  Cotiza tus medicamentos
                 </h3>
                 <h4 className="subtitulo-footer">
-                  Ecríbenos tu opinión o dudas, y ayudanos a crecer.
+                  Escríbenos para conocer tu necesidad
                 </h4>
               </Col>
             </Row>

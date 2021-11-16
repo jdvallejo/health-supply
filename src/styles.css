@@ -271,8 +271,9 @@ body {
   font-family: Quicksand;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 24px;
+  margin-bottom: 0;
 
   /* or 150% */
   letter-spacing: 1px;
@@ -294,6 +295,7 @@ footer {
   line-height: 24px;
   letter-spacing: 1px;
   color: #ffffff;
+  margin-bottom: 0;
 }
 
 .contacto-form .form-control {
@@ -440,6 +442,12 @@ footer {
   border-bottom: 2px solid #005082;
 }
 
+@media (max-width: 1199.98px) {
+  .card-especialidades {
+    margin-top: -12%;
+  }
+}
+
 @media (max-width: 991.98px) {
   .navbar-collapse {
     background-color: #ffffff;
@@ -560,5 +568,10 @@ footer {
   .nav-tabs .nav-link,
   .nav-tabs .nav-link.active {
     font-size: 14px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
   }
 }
