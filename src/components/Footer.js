@@ -16,7 +16,7 @@ const Footer = () => {
                 <Col md={12}>
                   <figure className="logo m-0">
                     <StaticImage
-                      alt="vw camiones"
+                      alt="health supply"
                       src="../images/assets/health-supply-logo-white.png"
                       style={{ height: "100%", width: "100%" }}
                       imgStyle={{ objectFit: "contain" }}
@@ -25,15 +25,23 @@ const Footer = () => {
                 </Col>
               </Row>
               <Row>
-                <Col md={4} className="border-footer d-flex align-items-center justify-content-center">
+                <Col
+                  md={4}
+                  className="border-footer d-flex align-items-center justify-content-center"
+                >
                   <div>
                     <h4 className="texto-footer mt-4">
                       890 SOUTHDIXIE HIGHWAY, CORAL GABLES, FL 33146 US
                     </h4>
                   </div>
                 </Col>
-                <Col md={4} className="border-footer d-flex align-items-center justify-content-center mt-3 mt-md-0">
-                  <h4 className="texto-footer text-center">Teléfono: +1 395 8978998</h4>
+                <Col
+                  md={4}
+                  className="border-footer d-flex align-items-center justify-content-center mt-3 mt-md-0"
+                >
+                  <h4 className="texto-footer text-center">
+                    Teléfono: +1 395 8978998
+                  </h4>
                   {/* <div className="">
                     <h3 className="name-list-footer">Site</h3>
                     <ListGroup horizontal className="list-footer">
@@ -66,7 +74,7 @@ const Footer = () => {
         </Col>
       </Row>
       <Row>
-        <Col md={12} className="text-center mt-3">
+        <Col md={12} className="text-center mt-3 mb-4 pb-1">
           <p className="copyright text-uppercase mb-1">Health Supply</p>
           <p className="copyright">All rights reserved. Copyright © 2021</p>
         </Col>

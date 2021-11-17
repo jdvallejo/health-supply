@@ -3,14 +3,15 @@ import React, { useState } from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+// import Button from "react-bootstrap/Button";
+// import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import logo1 from "../images/assets/health-supply-logo.png"
 import logo2 from "../images/assets/health-supply-logo-white.png"
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Menu = () => {
   const [navbar, setNavbar] = useState(false);
@@ -62,7 +63,13 @@ const Menu = () => {
             <Nav.Link as={Link} to="/">
               HOME
             </Nav.Link>
-            <NavDropdown title="Medicinas">
+            <AnchorLink
+              to="/#especialidades"
+              className={navbar ? "nav-link nav-link-light active" : "nav-link nav-link-light"}
+            >
+              MEDICAMENTOS
+            </AnchorLink>
+            {/* <NavDropdown title="Medicinas">
               <NavDropdown.Item as={Link} to="/">
                 MEDICINA 1
               </NavDropdown.Item>
@@ -70,8 +77,8 @@ const Menu = () => {
               <NavDropdown.Item as={Link} to="/">
                 MEDICINA 2
               </NavDropdown.Item>
-            </NavDropdown>
-            <NavDropdown
+            </NavDropdown> */}
+            {/* <NavDropdown
               title="Empresa"
               className={navbar ? "nav-link-light active" : "nav-link-light"}
             >
@@ -82,29 +89,54 @@ const Menu = () => {
               <NavDropdown.Item as={Link} to="/">
                 EMPRESA 2
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
+            <AnchorLink
+              as={Link}
+              to="/#nosotros"
+              className={navbar ? "nav-link nav-link-light active" : "nav-link nav-link-light"}
+            >
+              EMPRESA
+            </AnchorLink>
+            <AnchorLink
+              as={Link}
+              to="/#contacto"
+              className={navbar ? "nav-link nav-link-light active" : "nav-link nav-link-light"}
+            >
+              CONTACTO
+            </AnchorLink>
             <Nav.Link
               as={Link}
               to="/"
-              className={navbar ? "nav-link-light active" : "nav-link-light"}
+              className={navbar ? "nav-link-light active d-flex me-0" : "nav-link-light d-flex me-0"}
             >
-              CONTACTO
+              <figure className="menu-flag"><StaticImage
+                alt="healthy supply"
+                src="../images/assets/spain-flag.svg"
+                style={{ height: "100%", width: "100%" }}
+                imgStyle={{ objectFit: "contain" }}
+              /></figure> <span className="ps-1">ES</span>
             </Nav.Link>
-            <NavDropdown
-              title="Español"
-              className={navbar ? "nav-link-light active" : "nav-link-light"}
+            <Nav.Link
+              as={Link}
+              to="/"
+              className={navbar ? "nav-link-light active d-flex" : "nav-link-light d-flex"}
             >
-              <NavDropdown.Item as={Link} to="/">
-                INGLÉS
-              </NavDropdown.Item>
-            </NavDropdown>
+              <figure className="menu-flag"><StaticImage
+                alt="healthy supply"
+                src="../images/assets/usa-flag.svg"
+                style={{ height: "100%", width: "100%" }}
+                imgStyle={{ objectFit: "contain" }}
+              /></figure> <span className="ps-1">EN</span>
+            </Nav.Link>
+
+
           </Nav>
-          <Form className="d-flex btn-nav">
-            {/* <Button variant="outline-success me-3">Whatsapp</Button> */}
+          {/* <Form className="d-flex btn-nav">
+            <Button variant="outline-success me-3">Whatsapp</Button>
             <Button variant={navbar ? "outline-secondary btn-contacto-hover px-3" : "outline-light btn-contacto px-3"}>
               Contactarnos
             </Button>
-          </Form>
+          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
