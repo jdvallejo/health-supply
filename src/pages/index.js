@@ -1,4 +1,6 @@
 import * as React from "react";
+import { graphql } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import Helmet from "react-helmet";
 import Especialidades from "../components/Especialidades";
 // import Testimonios from "../components/Testimonios";
@@ -16,6 +18,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 const IndexPage = () => {
+  const { t } = useTranslation();
   return (
     <main>
       <Helmet>
@@ -57,6 +60,7 @@ const IndexPage = () => {
                 <h2 className="titulo-pasos mb-2 mb-md-3">
                   Tus medicamentos en pocos pasos
                 </h2>
+                <h2>{t("Home")}</h2>
               </Col>
             </Row>
 
@@ -213,3 +217,17 @@ const IndexPage = () => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

@@ -184,7 +184,7 @@ const Formulario = () => {
                         </div>
 
                       ))}
-                      <p>El interés seleccionado es: {interes} </p>
+                      {/* <p>El interés seleccionado es: {interes} </p> */}
                     </Col>
                   </Row>
 
