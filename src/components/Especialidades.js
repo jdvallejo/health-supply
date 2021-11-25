@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -12,6 +13,7 @@ SwiperCore.use([Navigation]);
 SwiperCore.use([Pagination]);
 
 const Especialidades = () => {
+  const { t } = useTranslation();
   return (
     <Container className="cont-especialidades" id="especialidades">
       <Row>
@@ -34,10 +36,10 @@ const Especialidades = () => {
             <Card.ImgOverlay>
               <div className="texto-tarjeta mt-md-3 mt-lg-5 ms-md-3 ms-lg-5">
                 <h3 className="titulo-home text-light">
-                  Medicamentos para todos
+                  {t("medicamentos.titulo")}
                 </h3>
                 <p className="texto-especialidades">
-                  Cubrimos todas las especialidades
+                  {t("medicamentos.subtitulo")}
                 </p>
               </div>
             </Card.ImgOverlay>
@@ -49,11 +51,9 @@ const Especialidades = () => {
           <div className="bg-card shadow">
             <Row>
               <Col md={4} lg={5} className="my-auto">
-                <h3 className="titulo-especialidad">Especialidades</h3>
+                <h3 className="titulo-especialidad">{t("especialidades.titulo")}</h3>
                 <p className="texto-especialidad">
-                  A continuación, algunos de los medicamentos más solicitados.
-                  Recuerda que puedes contactarnos en caso de necesitar
-                  cualquier producto que no está en el listado.
+                  {t("especialidades.parrafo")}
                 </p>
               </Col>
               <Col md={8} lg={7}>
@@ -87,12 +87,9 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Oncología</h3>
+                          <h3 className="titulo-especialidad">{t("oncologia.titulo")}</h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de oncología como: Opdivo (Nivolumab),
-                            Padcev (Enfortumab), Tibsovo (Ivosidenib),
-                            Carmustine (Carmustine) y Trodelvi (Sacituzumab).
+                            {t("oncologia.parrafo")}
                           </p>
                         </Col>
                       </Row>

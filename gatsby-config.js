@@ -27,19 +27,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Montserrat \:400,600,700,800,900`,
-          `Quicksand`,
-        ],
-        display: 'swap'
-      }
+        fonts: [`Montserrat \:400,600,700,800,900`, `Quicksand`],
+        display: "swap",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,
-        name: `locale`
-      }
+        name: `locale`,
+      },
     },
     {
       resolve: `gatsby-plugin-react-i18next`,
@@ -52,23 +49,24 @@ module.exports = {
         // you can pass any i18next options
         i18nextOptions: {
           interpolation: {
-            escapeValue: false // not needed for react as it escapes by default
+            escapeValue: false, // not needed for react as it escapes by default
           },
-          keySeparator: false,
-          nsSeparator: false
+          // keySeparator: false,
+          keySeparator: ".",
+          nsSeparator: false,
         },
         pages: [
           {
-            matchPath: '/:lang?/blog/:uid',
+            matchPath: "/:lang?/blog/:uid",
             getLanguageFromPath: true,
-            excludeLanguages: ['es']
+            excludeLanguages: ["es"],
           },
           {
-            matchPath: '/preview',
-            languages: ['en']
-          }
-        ]
-      }
-    }
+            matchPath: "/preview",
+            languages: ["en"],
+          },
+        ],
+      },
+    },
   ],
 };

@@ -1,3 +1,38 @@
 {
-    "Home": "Homeeee"
+  "menu": {
+    "opcion1": "Home",
+    "opcion2": "Medicines",
+    "opcion3": "About us",
+    "opcion4": "Contact us"
+  },
+  "banner": {
+    "nombre": "../images/health-supply-banner-en.png"
+  },
+  "pasos": {
+    "titulo": "Your medications in a few steps",
+    "paso1": "Send your inquiry",
+    "paso2": "We send you the best option",
+    "paso3": "You confirm the order",
+    "paso4": "We send the medicine"
+  },
+  "healthsupply": {
+    "titulo": "Health supply in the world ",
+    "parrafo": "Health Supply offers patients and healthcare professionals, hard to find medicines in their countries, not available due to shortages or lack of registration, we always put the patient safety first and in compliance with legal regulations. To achieve this objective, we have a wide network of distributors and associated laboratories in 4 continents and more than 18 countries. Our strength is to offer all types of medicines aligning ourselves to the specific needs of each patient."
+  },
+  "nosotros": {
+    "titulo": "About us",
+    "parrafo": "With more than 20 years of experience in the pharmaceutical market and especially in the Oncology area, it was evident that, in emerging countries, 100% of the treatments indicated to patients could not be performed due to lack of access to medicines. In 2007 HSP was founded, with the aim of offering products not available in emerging countries to patients all over the world."
+  },
+  "medicamentos": {
+    "titulo": "Medicines for all",
+    "subtitulo": "We cover all specialties"
+  },
+  "especialidades": {
+    "titulo": "Specialties",
+    "parrafo": "Please, go to contact us, send us a request of the medicine you are looking for, and we will quote the best option for you, we have more than 1.600 medicines available. Below, some of the top requested products:"
+  },
+  "oncologia": {
+    "titulo": "Oncology",
+    "parrafo": "We have many medicines available for you such as: Opdivo (Nivolumab), Padcev (Enfortumab), Tibsovo (Ivosidenib), Carmustine (Carmustine) y Trodelvi (Sacituzumab)."
+}
 }

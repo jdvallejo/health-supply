@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useI18next } from "gatsby-plugin-react-i18next";
+import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next";
 // import * as React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -15,6 +15,7 @@ import logo2 from "../images/assets/health-supply-logo-white.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Menu = () => {
+  const { t } = useTranslation();
   const { languages, originalPath } = useI18next();
 
   const [navbar, setNavbar] = useState(false);
@@ -43,7 +44,7 @@ const Menu = () => {
               alt="healthy supply"
               src={navbar ? `${logo1}` : `${logo2}`}
               fluid
-              /* src="../images/assets/health-supply-logo-white.png" */
+            /* src="../images/assets/health-supply-logo-white.png" */
             />
           </figure>
           {/* <figure className="logo m-0 d-none d-sm-block">
@@ -68,7 +69,7 @@ const Menu = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">
-              HOME
+              {t("menu.opcion1")}
             </Nav.Link>
             <AnchorLink
               to="/#especialidades"
@@ -78,7 +79,7 @@ const Menu = () => {
                   : "nav-link nav-link-light"
               }
             >
-              MEDICAMENTOS
+              {t("menu.opcion2")}
             </AnchorLink>
             {/* <NavDropdown title="Medicinas">
               <NavDropdown.Item as={Link} to="/">
@@ -110,7 +111,7 @@ const Menu = () => {
                   : "nav-link nav-link-light"
               }
             >
-              EMPRESA
+              {t("menu.opcion3")}
             </AnchorLink>
             <AnchorLink
               as={Link}
@@ -121,7 +122,7 @@ const Menu = () => {
                   : "nav-link nav-link-light"
               }
             >
-              CONTACTO
+              {t("menu.opcion4")}
             </AnchorLink>
             <Nav.Link
               as={Link}
@@ -132,7 +133,18 @@ const Menu = () => {
                   : "nav-link-light d-flex me-0"
               }
             >
-              <figure className="menu-flag">
+
+
+              {languages.map((lng) => (
+                <li key={lng}>
+                  <Link to={originalPath} language={lng}>
+                    {lng}
+                  </Link>
+                </li>
+              ))}
+
+
+              {/* <figure className="menu-flag">
                 <StaticImage
                   alt="healthy supply"
                   src="../images/assets/spain-flag.svg"
@@ -140,9 +152,9 @@ const Menu = () => {
                   imgStyle={{ objectFit: "contain" }}
                 />
               </figure>{" "}
-              <span className="ps-1">ES</span>
+              <span className="ps-1">ES</span> */}
             </Nav.Link>
-            <Nav.Link
+            {/* <Nav.Link
               as={Link}
               to="/"
               className={
@@ -160,8 +172,8 @@ const Menu = () => {
                 />
               </figure>{" "}
               <span className="ps-1">EN</span>
-            </Nav.Link>
-            <ul className="languages">
+            </Nav.Link> */}
+            {/* <ul className="languages">
               {languages.map((lng) => (
                 <li key={lng}>
                   <Link to={originalPath} language={lng}>
@@ -169,7 +181,7 @@ const Menu = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </Nav>
           {/* <Form className="d-flex btn-nav">
             <Button variant="outline-success me-3">Whatsapp</Button>

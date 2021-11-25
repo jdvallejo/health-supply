@@ -1,3 +1,38 @@
 {
-    "Home": "Inicio"
+  "menu": {
+    "opcion1": "Inicio",
+    "opcion2": "Medicamentos",
+    "opcion3": "Empresa",
+    "opcion4": "Contáctanos"
+  },
+  "banner": {
+    "nombre": "../images/health-supply-banner.png"
+  },
+  "pasos": {
+    "titulo": "Tus medicamentos en pocos pasos",
+    "paso1": "Envía tu consulta",
+    "paso2": "Te enviamos la mejor opción",
+    "paso3": "Confirmas el Pedido",
+    "paso4": "Enviamos el Medicamento"
+  },
+  "healthsupply": {
+    "titulo": "Healthsuply en el mundo",
+    "parrafo": "Health Supply, ofrece a pacientes el acceso a medicamentos no disponibles o difíciles de conseguir de forma rápida, segura y cumpliendo todas las normativas legales. Para lograr este objetivo, contamos con una amplia red de distribuidores y laboratorios asociados con presencia en 4 cuatro continentes y más de 18 países. Nuestra fortaleza es ofrecer todo tipo de medicamentos alineándonos a las necesidades específicas de cada paciente."
+  },
+  "nosotros": {
+    "titulo": "Quienes somos",
+    "parrafo": "Con más de 20 años de experiencia en el mercado farmacéutico y especialmente en el área Oncológica, se evidenció que, en países emergentes, no se podían realizar el 100% de los tratamientos indicados a pacientes por falta de acceso a medicamentos. En el 2007 HSP es fundada, con el objetivo de ofrecer productos no disponibles en países emergentes apacientes de enfermedades graves."
+  },
+  "medicamentos": {
+    "titulo": "Medicamentos para todos",
+    "subtitulo": "Cubrimos todas las especialidades"
+  },
+  "especialidades": {
+    "titulo": "Especialidades",
+    "parrafo": "Por favor, vaya al menú contáctanos, envíenos una solicitud del medicamento que está buscando, y cotizaremos la mejor opción para usted, tenemos más de 1.600 medicamentos disponibles. A continuación, algunos de los productos más solicitados:"
+  },
+  "oncologia": {
+      "titulo": "Oncología",
+      "parrafo": "Te podemos proveer de todas las medicinas de la especialidad de oncología como: Opdivo (Nivolumab), Padcev (Enfortumab), Tibsovo (Ivosidenib), Carmustine (Carmustine) y Trodelvi (Sacituzumab)."
+  }
 }
