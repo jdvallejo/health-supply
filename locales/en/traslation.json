@@ -5,9 +5,6 @@
     "opcion3": "About us",
     "opcion4": "Contact us"
   },
-  "banner": {
-    "nombre": "../images/health-supply-banner-en.png"
-  },
   "pasos": {
     "titulo": "Your medications in a few steps",
     "paso1": "Send your inquiry",
@@ -34,5 +31,57 @@
   "oncologia": {
     "titulo": "Oncology",
     "parrafo": "We have many medicines available for you such as: Opdivo (Nivolumab), Padcev (Enfortumab), Tibsovo (Ivosidenib), Carmustine (Carmustine) y Trodelvi (Sacituzumab)."
-}
+  },
+  "neurologia": {
+    "titulo": "Neurology",
+    "parrafo": "We have many medicines available for you such as: Neupro (rotigotine), Wakix (pitolisant), Aduhelm (aducanumab-avwa) y Ponvory (ponesimod)."
+  },
+  "dermatologia": {
+    "titulo": "Dermatology",
+    "parrafo": "We have many medicines available for you such as: Cibinqo (abrocitinib), Tremfya (guselkumab), Olumiant (baricitinib) y Skilarence (dimethyl fumarate)."
+  },
+  "patologia": {
+    "titulo": "Pathology",
+    "parrafo": "We have many medicines available for you such as: Livmarli (maralixibat), Bylvay (odevixibat) y Ocaliva (obeticholic acid)."
+  },
+  "infectologia": {
+    "titulo": "Infectology",
+    "parrafo": "We have many medicines available for you such as: Rukobia (fostemsavir), Cabenuva (cabotegravir + rilpivirine), Veklury (remdesivir) y Truvada (emtricitabine / tenofovir disoproxil)."
+  },
+  "neumologia": {
+    "titulo": "Pneumology",
+    "parrafo": "We have many medicines available for you such as: Rukobia (fostemsavir), Cabenuva (cabotegravir + rilpivirine), Veklury (remdesivir) y Truvada (emtricitabine / tenofovir disoproxil)."
+  },
+  "reumatologia": {
+    "titulo": "Rheumatology",
+    "parrafo": "We have many medicines available for you such as: Kevzara (Sarilumab), Rinvoq (upadacitinib), Jyseleca (filgotinib) y Tremfya (guselkumab)."
+  },
+  "hematologia": {
+    "titulo": "Hematology",
+    "parrafo": "We have many medicines available for you such as: Tavneos (avacopan), Ultomiris (ravulizumab), Adakveo (crizanlizumab) y Ondexxya (andexanet alfa)."
+  },
+  "ginecologia": {
+    "titulo": "Gynecology ",
+    "parrafo": "We have many medicines available for you such as: Relumina y Orilissa (elagolix)."
+  },
+  "endocrinologia": {
+    "titulo": "Endocrinology",
+    "parrafo": "We have many medicines available for you such as: Imcivree (setmelanotide), Voxzogo (vosoritide), Zegalogue (dasiglucagon) y Roszet (rosuvastatin and ezetimibe)."
+  },
+  "cardiologia": {
+    "titulo": "Cardiology",
+    "parrafo": "We have many medicines available for you such as: Repatha (evolocumab), Verquvo (vericiguat), Nexletol (bempedoic acid) y Vascepa (icosapent ethyl)."
+  },
+  "cotizador": {
+    "titulo": "Quote your medicines",
+    "subtitulo": "Write us to know your need",
+    "nombre": "Full Name*",
+    "email": "Email*",
+    "telefono": "Telephone*",
+    "pais": "Country*",
+    "mensaje": "Message*",
+    "paciente": "I am a patient",
+    "profesional": "I am a health professional",
+    "boton": "Send"
+  }
 }

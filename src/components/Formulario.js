@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { Link, useHistory } from "react-router-dom";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 import axios from "axios";
 import Swal from "sweetalert2";
 import Container from "react-bootstrap/Container";
@@ -8,8 +8,11 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Button from "react-bootstrap/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Formulario = () => {
+  const { t } = useTranslation();
   const [nombres, setNombres] = useState("");
   const [email, setEmail] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -17,9 +20,9 @@ const Formulario = () => {
   const [mensaje, setMensaje] = useState("");
   const [interes, setInteres] = useState("");
 
-  const cambioInteres = e => {
+  const cambioInteres = (e) => {
     setInteres(e.target.value);
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -81,9 +84,13 @@ const Formulario = () => {
           <footer>
             <Row>
               <Col md={12} className="text-center" id="contacto">
-                <h3 className="titulo-footer">Cotiza tus medicamentos</h3>
+                <h3 className="titulo-footer">{t("cotizador.titulo")}</h3>
                 <h4 className="subtitulo-footer">
-                  Escríbenos para conocer tu necesidad
+                  {t("cotizador.subtitulo")}
+                  <p className="email-footer">
+                    <FontAwesomeIcon icon={faEnvelope} />
+                    <span className="ps-1">crm@healthsupply-online.com</span>
+                  </p>
                 </h4>
               </Col>
             </Row>
@@ -95,21 +102,21 @@ const Formulario = () => {
                   onSubmit={handleSubmit}
                 >
                   <Row className="mb-3">
-                    <Col md={6} controlId="formGridEmail">
-                      <FloatingLabel label="Nombre y Apellido*">
+                    <Col md={6}>
+                      <FloatingLabel label={t("cotizador.nombre")}>
                         <Form.Control
                           type="text"
-                          placeholder="Nombre y Apellido"
+                          placeholder={t("cotizador.nombre")}
                           required
                           onChange={(e) => setNombres(e.target.value)}
                         />
                       </FloatingLabel>
                     </Col>
-                    <Col md={6} controlId="formGridEmail">
-                      <FloatingLabel label="Email*">
+                    <Col md={6}>
+                      <FloatingLabel label={t("cotizador.email")}>
                         <Form.Control
                           type="email"
-                          placeholder="Email"
+                          placeholder={t("cotizador.email")}
                           required
                           onChange={(e) => setEmail(e.target.value)}
                         />
@@ -117,21 +124,21 @@ const Formulario = () => {
                     </Col>
                   </Row>
                   <Row className="mb-3">
-                    <Col md={6} controlId="formGridPassword">
-                      <FloatingLabel label="Teléfono*">
+                    <Col md={6}>
+                      <FloatingLabel label={t("cotizador.telefono")}>
                         <Form.Control
                           type="text"
-                          placeholder="Teléfono"
+                          placeholder={t("cotizador.telefono")}
                           required
                           onChange={(e) => setTelefono(e.target.value)}
                         />
                       </FloatingLabel>
                     </Col>
-                    <Col md={6} controlId="formGridPassword">
-                      <FloatingLabel label="País de contacto*">
+                    <Col md={6}>
+                      <FloatingLabel label={t("cotizador.pais")}>
                         <Form.Control
                           type="text"
-                          placeholder="País de contacto"
+                          placeholder={t("cotizador.pais")}
                           required
                           onChange={(e) => setPais(e.target.value)}
                         />
@@ -140,14 +147,11 @@ const Formulario = () => {
                   </Row>
 
                   <Row className="mb-4">
-                    <Col md={12} controlId="formGridPassword">
-                      <FloatingLabel
-                        controlId="floatingTextarea2"
-                        label="Mensaje*"
-                      >
+                    <Col md={12}>
+                      <FloatingLabel label={t("cotizador.mensaje")}>
                         <Form.Control
                           as="textarea"
-                          placeholder="Leave a comment here"
+                          placeholder={t("cotizador.mensaje")}
                           style={{ height: "100px" }}
                           required
                           onChange={(e) => setMensaje(e.target.value)}
@@ -162,29 +166,36 @@ const Formulario = () => {
                         <div key={`inline-${type}`} className="mb-3">
                           <Form.Check
                             inline
-                            label="Soy un paciente"
+                            label={t("cotizador.paciente")}
                             name="group1"
                             type={type}
                             id={`inline-${type}-1`}
-                            value="Paciente"
-                            checked={interes === "Paciente" ? true : false}
+                            value={t("cotizador.paciente")}
+                            checked={
+                              interes === `{t("cotizador.paciente")}`
+                                ? true
+                                : false
+                            }
                             onChange={cambioInteres}
                             required
                           />
                           <Form.Check
                             inline
-                            label="Soy un profesional de la salud"
+                            label={t("cotizador.profesional")}
                             name="group1"
                             type={type}
                             id={`inline-${type}-2`}
-                            value="Profesional de la salud"
-                            checked={interes === "Profesional de la salud" ? true : false}
+                            value={t("cotizador.profesional")}
+                            checked={
+                              interes === `{t("cotizador.profesional")}`
+                                ? true
+                                : false
+                            }
                             onChange={cambioInteres}
                           />
                         </div>
-
                       ))}
-                      {/* <p>El interés seleccionado es: {interes} </p> */}
+                      {/* <p>El interés seleccionado es: {interes}</p> */}
                     </Col>
                   </Row>
 
@@ -195,7 +206,7 @@ const Formulario = () => {
                         type="submit"
                         className="btn-enviar px-4"
                       >
-                        TU MEDICAMENTO A UN CLICK
+                        {t("cotizador.boton")}
                       </Button>
                     </Col>
                   </Row>

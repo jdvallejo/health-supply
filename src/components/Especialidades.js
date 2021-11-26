@@ -51,7 +51,9 @@ const Especialidades = () => {
           <div className="bg-card shadow">
             <Row>
               <Col md={4} lg={5} className="my-auto">
-                <h3 className="titulo-especialidad">{t("especialidades.titulo")}</h3>
+                <h3 className="titulo-especialidad">
+                  {t("especialidades.titulo")}
+                </h3>
                 <p className="texto-especialidad">
                   {t("especialidades.parrafo")}
                 </p>
@@ -87,7 +89,9 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">{t("oncologia.titulo")}</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("oncologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
                             {t("oncologia.parrafo")}
                           </p>
@@ -116,12 +120,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Neurología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("neurologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de neurología como: Neupro
-                            (rotigotine), Wakix (pitolisant), Aduhelm
-                            (aducanumab-avwa) y Ponvory (ponesimod).
+                            {t("neurologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -148,12 +151,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Dermatología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("dermatologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de dermatología como: Cibinqo
-                            (abrocitinib), Tremfya (guselkumab), Olumiant
-                            (baricitinib) y Skilarence (dimethyl fumarate).
+                            {t("dermatologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -180,12 +182,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Patología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("patologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de patología como: Livmarli
-                            (maralixibat), Bylvay (odevixibat) y Ocaliva
-                            (obeticholic acid).
+                            {t("patologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -212,13 +213,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Infectología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("infectologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de infectología como: Rukobia
-                            (fostemsavir), Cabenuva (cabotegravir +
-                            rilpivirine), Veklury (remdesivir) y Truvada
-                            (emtricitabine / tenofovir disoproxil).
+                            {t("infectologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -245,14 +244,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Neumología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("neumologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de neumología como: Yupelri
-                            (revefenacin), Kaftrio
-                            (elexacaftor/tezacaftor/ivacaftor), Symkevi
-                            (tezacaftor/ivacaftor) y Symdeko (tezacaftor /
-                            ivacaftor).
+                            {t("neumologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -279,12 +275,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Reumatología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("reumatologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de reumatología como: Kevzara
-                            (Sarilumab), Rinvoq (upadacitinib), Jyseleca
-                            (filgotinib) y Tremfya (guselkumab).
+                            {t("reumatologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -311,12 +306,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Hematología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("hematologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de hematología como: Tavneos
-                            (avacopan), Ultomiris (ravulizumab), Adakveo
-                            (crizanlizumab) y Ondexxya (andexanet alfa).
+                            {t("hematologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -343,11 +337,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Ginecología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("ginecologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de ginecología como: Relumina y
-                            Orilissa (elagolix).
+                            {t("ginecologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -375,14 +369,10 @@ const Especialidades = () => {
                           className="my-auto p-4 ps-md-0"
                         >
                           <h3 className="titulo-especialidad">
-                            Endocrinología
+                            {t("endocrinologia.titulo")}
                           </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de endocrinología como: Imcivree
-                            (setmelanotide), Voxzogo (vosoritide), Zegalogue
-                            (dasiglucagon) y Roszet (rosuvastatin and
-                            ezetimibe).
+                            {t("endocrinologia.parrafo")}
                           </p>
                         </Col>
                       </Row>
@@ -409,12 +399,11 @@ const Especialidades = () => {
                           xxl={7}
                           className="my-auto p-4 ps-md-0"
                         >
-                          <h3 className="titulo-especialidad">Cardiología</h3>
+                          <h3 className="titulo-especialidad">
+                            {t("cardiologia.titulo")}
+                          </h3>
                           <p className="texto-especialidad-card">
-                            Te podemos proveer de todas las medicinas de la
-                            especialidad de cardiología como: Repatha
-                            (evolocumab), Verquvo (vericiguat), Nexletol
-                            (bempedoic acid) y Vascepa (icosapent ethyl).
+                            {t("cardiologia.parrafo")}
                           </p>
                         </Col>
                       </Row>

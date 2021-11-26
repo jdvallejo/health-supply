@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { useTranslation } from "gatsby-plugin-react-i18next";
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
 import Helmet from "react-helmet";
 import Especialidades from "../components/Especialidades";
 // import Testimonios from "../components/Testimonios";
@@ -19,6 +19,9 @@ import "swiper/css/pagination";
 
 const IndexPage = () => {
   const { t } = useTranslation();
+  const i18n = useI18next();
+  const currentLanguage = i18n.language;
+
   return (
     <main>
       <Helmet>
@@ -36,21 +39,42 @@ const IndexPage = () => {
       <Container fluid className="colors">
         <Row>
           <Col md={12} className="px-0">
-            <StaticImage
-              alt="health supply"
-              src="../images/health-supply-banner-xs.png"
-              className="d-block d-sm-none"
-              style={{ height: "100%", width: "100%" }}
-              imgStyle={{ objectFit: "contain" }}
-            />
-            <StaticImage
-              alt="health supply"
-              // src={`${t("banner.nombre")}`}
-              src="../images/health-supply-banner.png"
-              className="d-none d-sm-block"
-              style={{ height: "100%", width: "100%" }}
-              imgStyle={{ objectFit: "contain" }}
-            />
+            {currentLanguage === "en" && (
+              <>
+                <StaticImage
+                  alt="health supply"
+                  src="../images/health-supply-banner-xs-en.png"
+                  className="d-block d-sm-none"
+                  style={{ height: "100%", width: "100%" }}
+                  imgStyle={{ objectFit: "contain" }}
+                />
+                <StaticImage
+                  alt="health supply"
+                  src="../images/health-supply-banner-en.png"
+                  className="d-none d-sm-block"
+                  style={{ height: "100%", width: "100%" }}
+                  imgStyle={{ objectFit: "contain" }}
+                />
+              </>
+            )}
+            {currentLanguage === "es" && (
+              <>
+                <StaticImage
+                  alt="health supply"
+                  src="../images/health-supply-banner-xs.png"
+                  className="d-block d-sm-none"
+                  style={{ height: "100%", width: "100%" }}
+                  imgStyle={{ objectFit: "contain" }}
+                />
+                <StaticImage
+                  alt="health supply"
+                  src="../images/health-supply-banner.png"
+                  className="d-none d-sm-block"
+                  style={{ height: "100%", width: "100%" }}
+                  imgStyle={{ objectFit: "contain" }}
+                />
+              </>
+            )}
           </Col>
         </Row>
 

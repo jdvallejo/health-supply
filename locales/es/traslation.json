@@ -5,9 +5,6 @@
     "opcion3": "Empresa",
     "opcion4": "Contáctanos"
   },
-  "banner": {
-    "nombre": "../images/health-supply-banner.png"
-  },
   "pasos": {
     "titulo": "Tus medicamentos en pocos pasos",
     "paso1": "Envía tu consulta",
@@ -32,7 +29,59 @@
     "parrafo": "Por favor, vaya al menú contáctanos, envíenos una solicitud del medicamento que está buscando, y cotizaremos la mejor opción para usted, tenemos más de 1.600 medicamentos disponibles. A continuación, algunos de los productos más solicitados:"
   },
   "oncologia": {
-      "titulo": "Oncología",
-      "parrafo": "Te podemos proveer de todas las medicinas de la especialidad de oncología como: Opdivo (Nivolumab), Padcev (Enfortumab), Tibsovo (Ivosidenib), Carmustine (Carmustine) y Trodelvi (Sacituzumab)."
+    "titulo": "Oncología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Opdivo (Nivolumab), Padcev (Enfortumab), Tibsovo (Ivosidenib), Carmustine (Carmustine) y Trodelvi (Sacituzumab)."
+  },
+  "neurologia": {
+    "titulo": "Neurología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Neupro (rotigotine), Wakix (pitolisant), Aduhelm (aducanumab-avwa) y Ponvory (ponesimod)."
+  },
+  "dermatologia": {
+    "titulo": "Dermatología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Cibinqo (abrocitinib), Tremfya (guselkumab), Olumiant (baricitinib) y Skilarence (dimethyl fumarate)."
+  },
+  "patologia": {
+    "titulo": "Patología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Livmarli (maralixibat), Bylvay (odevixibat) y Ocaliva (obeticholic acid)."
+  },
+  "infectologia": {
+    "titulo": "Infectología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Rukobia (fostemsavir), Cabenuva (cabotegravir + rilpivirine), Veklury (remdesivir) y Truvada (emtricitabine / tenofovir disoproxil)."
+  },
+  "neumologia": {
+    "titulo": "Neumología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Rukobia (fostemsavir), Cabenuva (cabotegravir + rilpivirine), Veklury (remdesivir) y Truvada (emtricitabine / tenofovir disoproxil)."
+  },
+  "reumatologia": {
+    "titulo": "Reumatología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Kevzara (Sarilumab), Rinvoq (upadacitinib), Jyseleca (filgotinib) y Tremfya (guselkumab)."
+  },
+  "hematologia": {
+    "titulo": "Hematología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Tavneos (avacopan), Ultomiris (ravulizumab), Adakveo (crizanlizumab) y Ondexxya (andexanet alfa)."
+  },
+  "ginecologia": {
+    "titulo": "Ginecología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Relumina y Orilissa (elagolix)."
+  },
+  "endocrinologia": {
+    "titulo": "Endocrinología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Imcivree (setmelanotide), Voxzogo (vosoritide), Zegalogue (dasiglucagon) y Roszet (rosuvastatin and ezetimibe)."
+  },
+  "cardiologia": {
+    "titulo": "Cardiología",
+    "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Repatha (evolocumab), Verquvo (vericiguat), Nexletol (bempedoic acid) y Vascepa (icosapent ethyl)."
+  },
+  "cotizador": {
+    "titulo": "Cotiza tus medicamentos",
+    "subtitulo": "Escríbenos para conocer tu necesidad",
+    "nombre": "Nombre y Apellido*",
+    "email": "Email*",
+    "telefono": "Teléfono*",
+    "pais": "País de contacto*",
+    "mensaje": "Mensaje*",
+    "paciente": "Soy un paciente",
+    "profesional": "Soy un profesional de la salud",
+    "boton": "Enviar"
   }
 }

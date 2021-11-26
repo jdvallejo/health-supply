@@ -1,22 +1,17 @@
 import React, { useState } from "react";
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next";
-// import * as React from "react";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
-// import Button from "react-bootstrap/Button";
-// import Form from "react-bootstrap/Form";
 import Image from "react-bootstrap/Image";
-// import NavDropdown from "react-bootstrap/NavDropdown";
 import { StaticImage } from "gatsby-plugin-image";
-/* import { Link } from "gatsby"; */
 import logo1 from "../images/assets/health-supply-logo.png";
 import logo2 from "../images/assets/health-supply-logo-white.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const Menu = () => {
   const { t } = useTranslation();
-  const { languages, originalPath } = useI18next();
+  const { originalPath } = useI18next();
 
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
@@ -44,21 +39,11 @@ const Menu = () => {
               alt="healthy supply"
               src={navbar ? `${logo1}` : `${logo2}`}
               fluid
-            /* src="../images/assets/health-supply-logo-white.png" */
             />
           </figure>
-          {/* <figure className="logo m-0 d-none d-sm-block">
-            <StaticImage
-              alt="healthy supply"
-              src="../images/assets/health-supply-logo.png"
-              style={{ height: "100%", width: "100%" }}
-              imgStyle={{ objectFit: "contain" }}
-            />
-          </figure> */}
           <figure className="logo m-0 d-none d-sm-block">
             <StaticImage
               alt="healthy supply"
-              /* src={navbar ? "../images/assets/health-supply-logo.png" : "../images/assets/health-supply-logo-white.png"} */
               src="../images/assets/health-supply-logo.png"
               style={{ height: "100%", width: "100%" }}
               imgStyle={{ objectFit: "contain" }}
@@ -126,41 +111,32 @@ const Menu = () => {
             </AnchorLink>
             <Nav.Link
               as={Link}
-              to="/"
+              to={originalPath}
+              language="es"
               className={
                 navbar
                   ? "nav-link-light active d-flex me-0"
                   : "nav-link-light d-flex me-0"
               }
             >
-
-
-              {languages.map((lng) => (
-                <li key={lng}>
-                  <Link to={originalPath} language={lng}>
-                    {lng}
-                  </Link>
-                </li>
-              ))}
-
-
-              {/* <figure className="menu-flag">
+              <figure className="menu-flag">
                 <StaticImage
                   alt="healthy supply"
                   src="../images/assets/spain-flag.svg"
                   style={{ height: "100%", width: "100%" }}
                   imgStyle={{ objectFit: "contain" }}
                 />
-              </figure>{" "}
-              <span className="ps-1">ES</span> */}
+              </figure>
+              <span className="ps-1">ES</span>
             </Nav.Link>
-            {/* <Nav.Link
+            <Nav.Link
               as={Link}
-              to="/"
+              to={originalPath}
+              language="en"
               className={
                 navbar
-                  ? "nav-link-light active d-flex"
-                  : "nav-link-light d-flex"
+                  ? "nav-link-light active d-flex me-0"
+                  : "nav-link-light d-flex me-0"
               }
             >
               <figure className="menu-flag">
@@ -170,25 +146,10 @@ const Menu = () => {
                   style={{ height: "100%", width: "100%" }}
                   imgStyle={{ objectFit: "contain" }}
                 />
-              </figure>{" "}
+              </figure>
               <span className="ps-1">EN</span>
-            </Nav.Link> */}
-            {/* <ul className="languages">
-              {languages.map((lng) => (
-                <li key={lng}>
-                  <Link to={originalPath} language={lng}>
-                    {lng}
-                  </Link>
-                </li>
-              ))}
-            </ul> */}
+            </Nav.Link>
           </Nav>
-          {/* <Form className="d-flex btn-nav">
-            <Button variant="outline-success me-3">Whatsapp</Button>
-            <Button variant={navbar ? "outline-secondary btn-contacto-hover px-3" : "outline-light btn-contacto px-3"}>
-              Contactarnos
-            </Button>
-          </Form> */}
         </Navbar.Collapse>
       </Container>
     </Navbar>
