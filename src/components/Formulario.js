@@ -170,12 +170,8 @@ const Formulario = () => {
                             name="group1"
                             type={type}
                             id={`inline-${type}-1`}
-                            value={t("cotizador.paciente")}
-                            checked={
-                              interes === `{t("cotizador.paciente")}`
-                                ? true
-                                : false
-                            }
+                            value="Paciente"
+                            checked={interes === "Paciente" ? true : false}
                             onChange={cambioInteres}
                             required
                           />
@@ -185,9 +181,9 @@ const Formulario = () => {
                             name="group1"
                             type={type}
                             id={`inline-${type}-2`}
-                            value={t("cotizador.profesional")}
+                            value="Profesional de la salud"
                             checked={
-                              interes === `{t("cotizador.profesional")}`
+                              interes === "Profesional de la salud"
                                 ? true
                                 : false
                             }
@@ -195,7 +191,7 @@ const Formulario = () => {
                           />
                         </div>
                       ))}
-                      {/* <p>El interés seleccionado es: {interes}</p> */}
+                      {/* <p>El interés seleccionado es: {interes} </p> */}
                     </Col>
                   </Row>
 
