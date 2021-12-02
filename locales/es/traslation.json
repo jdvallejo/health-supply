@@ -5,6 +5,12 @@
     "opcion3": "Empresa",
     "opcion4": "Contáctanos"
   },
+  "scroll": {
+    "opcion1": "/",
+    "opcion2": "/#especialidades",
+    "opcion3": "/#nosotros",
+    "opcion4": "/#contacto"
+  },
   "pasos": {
     "titulo": "Tus medicamentos en pocos pasos",
     "paso1": "Envía tu consulta",
@@ -73,8 +79,8 @@
     "parrafo": "Tenemos muchos medicamentos disponibles para ti como: Repatha (evolocumab), Verquvo (vericiguat), Nexletol (bempedoic acid) y Vascepa (icosapent ethyl)."
   },
   "cotizador": {
-    "titulo": "Cotiza tus medicamentos",
-    "subtitulo": "Escríbenos para conocer tu necesidad",
+    "titulo": "Solicita tus medicamentos",
+    "subtitulo": "Contáctanos para conocer tu necesidad",
     "nombre": "Nombre y Apellido*",
     "email": "Email*",
     "telefono": "Teléfono*",

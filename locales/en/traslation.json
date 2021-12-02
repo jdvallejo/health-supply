@@ -5,6 +5,12 @@
     "opcion3": "About us",
     "opcion4": "Contact us"
   },
+  "scroll": {
+    "opcion1": "/",
+    "opcion2": "/en/#especialidades",
+    "opcion3": "/en/#nosotros",
+    "opcion4": "/en/#contacto"
+  },
   "pasos": {
     "titulo": "Your medications in a few steps",
     "paso1": "Send your inquiry",
@@ -73,8 +79,8 @@
     "parrafo": "We have many medicines available for you such as: Repatha (evolocumab), Verquvo (vericiguat), Nexletol (bempedoic acid) y Vascepa (icosapent ethyl)."
   },
   "cotizador": {
-    "titulo": "Quote your medicines",
-    "subtitulo": "Write us to know your need",
+    "titulo": "Ask for your medicines",
+    "subtitulo": "Contact us to know your need",
     "nombre": "Full Name*",
     "email": "Email*",
     "telefono": "Telephone*",

@@ -53,11 +53,11 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to="/">
+            <Nav.Link as={Link} to={t("scroll.opcion1")}>
               {t("menu.opcion1")}
             </Nav.Link>
             <AnchorLink
-              to="/#especialidades"
+              to={t("scroll.opcion2")}
               className={
                 navbar
                   ? "nav-link nav-link-light active"
@@ -89,7 +89,7 @@ const Menu = () => {
             </NavDropdown> */}
             <AnchorLink
               as={Link}
-              to="/#nosotros"
+              to={t("scroll.opcion3")}
               className={
                 navbar
                   ? "nav-link nav-link-light active"
@@ -100,7 +100,7 @@ const Menu = () => {
             </AnchorLink>
             <AnchorLink
               as={Link}
-              to="/#contacto"
+              to={t("scroll.opcion4")}
               className={
                 navbar
                   ? "nav-link nav-link-light active"
