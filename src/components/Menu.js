@@ -36,14 +36,14 @@ const Menu = () => {
         <Navbar.Brand as={Link} to="/" className="ms-3">
           <figure className="logo m-0 d-block d-sm-none">
             <Image
-              alt="healthy supply"
+              alt="health supply"
               src={navbar ? `${logo1}` : `${logo2}`}
               fluid
             />
           </figure>
           <figure className="logo m-0 d-none d-sm-block">
             <StaticImage
-              alt="healthy supply"
+              alt="health supply"
               src="../images/assets/health-supply-logo.png"
               style={{ height: "100%", width: "100%" }}
               imgStyle={{ objectFit: "contain" }}
@@ -121,7 +121,7 @@ const Menu = () => {
             >
               <figure className="menu-flag">
                 <StaticImage
-                  alt="healthy supply"
+                  alt="health supply"
                   src="../images/assets/spain-flag.svg"
                   style={{ height: "100%", width: "100%" }}
                   imgStyle={{ objectFit: "contain" }}
@@ -141,7 +141,7 @@ const Menu = () => {
             >
               <figure className="menu-flag">
                 <StaticImage
-                  alt="healthy supply"
+                  alt="health supply"
                   src="../images/assets/usa-flag.svg"
                   style={{ height: "100%", width: "100%" }}
                   imgStyle={{ objectFit: "contain" }}

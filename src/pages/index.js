@@ -24,7 +24,11 @@ const IndexPage = () => {
 
   return (
     <main>
-      <Helmet>
+      <Helmet
+        htmlAttributes={{
+          lang: i18n.language,
+        }}
+      >
         <title>Health Supply</title>
         <meta
           name="keywords"
@@ -130,20 +134,13 @@ const IndexPage = () => {
                     <StaticImage
                       alt="mhra logo"
                       src="../images/mhra-logo.png"
-                      style={{ height: "100%", width: "100%" }}
-                      imgStyle={{ objectFit: "contain" }}
                     />
                   </figure>
                 </Col>
                 <Col md={1} className="d-none d-sm-block"></Col>
                 <Col xs={4} md={2} className="my-auto">
                   <figure className="logo-img">
-                    <StaticImage
-                      alt="ema logo"
-                      src="../images/ema-logo.png"
-                      style={{ height: "100%", width: "100%" }}
-                      imgStyle={{ objectFit: "contain" }}
-                    />
+                    <StaticImage alt="ema logo" src="../images/ema-logo.png" />
                   </figure>
                 </Col>
                 <Col md={1} className="d-none d-sm-block"></Col>
