@@ -5,6 +5,13 @@ module.exports = {
     title: "health-supply",
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-WZS46VG",
+        includeInDevelopment: false,
+      },
+    },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -68,5 +75,6 @@ module.exports = {
         ],
       },
     },
+    
   ],
 };

@@ -125,8 +125,8 @@ const IndexPage = () => {
           </Col>
         </Row>
 
-        <Row>
-          <Col md={12} className="nopadding">
+        <Row className="pb-4">
+          <Col md={12} className="nopadding px-0">
             <div className="logos-bar">
               <Row className="d-flex justify-content-center pb-3 pb-md-4">
                 <Col xs={4} md={2} className="my-auto">
@@ -134,13 +134,20 @@ const IndexPage = () => {
                     <StaticImage
                       alt="mhra logo"
                       src="../images/mhra-logo.png"
+                      style={{ height: "100%", width: "100%" }}
+                      imgStyle={{ objectFit: "contain" }}
                     />
                   </figure>
                 </Col>
                 <Col md={1} className="d-none d-sm-block"></Col>
                 <Col xs={4} md={2} className="my-auto">
                   <figure className="logo-img">
-                    <StaticImage alt="ema logo" src="../images/ema-logo.png" />
+                    <StaticImage
+                      alt="ema logo"
+                      src="../images/ema-logo.png"
+                      style={{ height: "100%", width: "100%" }}
+                      imgStyle={{ objectFit: "contain" }}
+                    />
                   </figure>
                 </Col>
                 <Col md={1} className="d-none d-sm-block"></Col>
