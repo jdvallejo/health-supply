@@ -32,6 +32,12 @@ module.exports = {
       __key: "images",
     },
     {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaultQuality: 100,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Montserrat \:400,600,700,800,900`, `Quicksand`],
