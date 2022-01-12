@@ -322,13 +322,13 @@ const Especialidades = () => {
                       <Row className="shadow rounded-3">
                         <Col md={3} lg={3} xxl={5} className="my-auto">
                           <figure className="p-3 mb-0">
-                            {/* <StaticImage
+                            <StaticImage
                               alt="health supply"
                               src="../images/especialidades/ginecologia.png"
                               className=""
                               style={{ height: "100%", width: "100%" }}
                               imgStyle={{ objectFit: "contain" }}
-                            /> */}
+                            />
                           </figure>
                         </Col>
                         <Col

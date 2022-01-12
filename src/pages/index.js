@@ -202,7 +202,7 @@ const IndexPage = () => {
                 <Col md={6} className="my-auto">
                   <StaticImage
                     alt="health supply"
-                    src="../images/video.jpg"
+                    src="../images/video.png"
                     className=""
                     style={{ height: "100%", width: "100%" }}
                     imgStyle={{ objectFit: "contain" }}
