@@ -3,7 +3,8 @@
     "opcion1": "Home",
     "opcion2": "Medicines",
     "opcion3": "About us",
-    "opcion4": "Contact us"
+    "opcion4": "Specialties",
+    "opcion5": "Contact us"
   },
   "scroll": {
     "opcion1": "/",

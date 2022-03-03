@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import { StaticImage } from "gatsby-plugin-image";
@@ -66,15 +67,7 @@ const Menu = () => {
             >
               {t("menu.opcion2")}
             </AnchorLink>
-            {/* <NavDropdown title="Medicinas">
-              <NavDropdown.Item as={Link} to="/">
-                MEDICINA 1
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/">
-                MEDICINA 2
-              </NavDropdown.Item>
-            </NavDropdown> */}
+
             {/* <NavDropdown
               title="Empresa"
               className={navbar ? "nav-link-light active" : "nav-link-light"}
@@ -87,6 +80,7 @@ const Menu = () => {
                 EMPRESA 2
               </NavDropdown.Item>
             </NavDropdown> */}
+
             <AnchorLink
               as={Link}
               to={t("scroll.opcion3")}
@@ -98,6 +92,50 @@ const Menu = () => {
             >
               {t("menu.opcion3")}
             </AnchorLink>
+
+            <NavDropdown title="Especialidades">
+              <NavDropdown.Item
+                as={Link}
+                to="/"
+                /* className={
+                  navbar
+                    ? "nav-link nav-link-light active"
+                    : "nav-link nav-link-light"
+                } */
+
+                className="d-flex align-items-center py-2"
+              >
+                <figure className="menu-especialidad">
+                  <StaticImage
+                    alt="health supply"
+                    src="../images/assets/especialidades/dermatologia.svg"
+                    style={{ height: "100%", width: "100%" }}
+                    imgStyle={{ objectFit: "contain" }}
+                  />
+                </figure>
+                <span className="pt-1">Dermatología</span>
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
+                to="/"
+                className="d-flex align-items-center py-2"
+              >
+                <figure className="menu-especialidad">
+                  <StaticImage
+                    alt="health supply"
+                    src="../images/assets/especialidades/pulmonologia.svg"
+                    style={{ height: "100%", width: "100%" }}
+                    imgStyle={{ objectFit: "contain" }}
+                  />
+                </figure>
+                <span className="">Pulmonología</span>
+              </NavDropdown.Item>
+              {/* <NavDropdown.Divider /> */}
+              {/* <NavDropdown.Item as={Link} to="/">
+                MEDICINA 2
+              </NavDropdown.Item> */}
+            </NavDropdown>
+
             <AnchorLink
               as={Link}
               to={t("scroll.opcion4")}
@@ -107,8 +145,9 @@ const Menu = () => {
                   : "nav-link nav-link-light"
               }
             >
-              {t("menu.opcion4")}
+              {t("menu.opcion5")}
             </AnchorLink>
+
             <Nav.Link
               as={Link}
               to={originalPath}

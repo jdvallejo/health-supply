@@ -3,7 +3,8 @@
     "opcion1": "Inicio",
     "opcion2": "Medicamentos",
     "opcion3": "Empresa",
-    "opcion4": "Contáctanos"
+    "opcion4": "Especialidades",
+    "opcion5": "Contáctanos"
   },
   "scroll": {
     "opcion1": "/",

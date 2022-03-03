@@ -40,6 +40,10 @@ body {
   color: rgba(0, 0, 0, 0.7);
 }
 
+.menu .navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.7);
+}
+
 .menu .nav-link-light.nav-item.dropdown a {
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
@@ -72,6 +76,30 @@ body {
 }
 
 .menu-flag {
+  width: 20px;
+  margin-bottom: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.dropdown-menu {
+  padding: 0;
+}
+
+.dropdown span {
+  text-transform: none;
+  color: #005082;
+  padding-left: 10px;
+}
+
+.menu-especialidad {
+  margin-bottom: 0;
+}
+
+.menu-especialidad img {
+  fill: #005082;
   width: 20px;
   margin-bottom: 0;
 }
