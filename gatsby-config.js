@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   pathPrefix: "/health-supply",
   siteMetadata: {
@@ -5,6 +9,30 @@ module.exports = {
     title: "health-supply",
   },
   plugins: [
+    "gatsby-plugin-postcss",
+    {
+      resolve: "gatsby-source-strapi",
+      options: {
+        apiURL: process.env.STRAPI_API_URL || "http://localhost:1337",
+        accessToken: process.env.STRAPI_TOKEN,
+        collectionTypes: [
+          {
+            singularName: "product",
+          },
+          {
+            singularName: "label",
+          },
+          {
+            singularName: "speciality",
+          },
+        ],
+        singleTypes: [],
+      },
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
@@ -27,7 +55,7 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: `${__dirname}/src/images`,
       },
       __key: "images",
     },
@@ -81,6 +109,5 @@ module.exports = {
         ],
       },
     },
-    
   ],
 };

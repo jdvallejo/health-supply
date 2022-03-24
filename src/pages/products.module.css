@@ -1,0 +1,12 @@
+.container{
+    background-color: #E5E5E5;
+    padding: 10px;
+}
+.containerSearch{
+    display: grid; 
+  grid-template-columns: 2.2fr 0.8fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". ."; 
+}
