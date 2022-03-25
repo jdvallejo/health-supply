@@ -16,6 +16,7 @@
   font-weight: 600;
   color: black;
   text-decoration: none;
+  padding-bottom: 10px;
 }
 .button {
   background-color: #014c7c;
@@ -31,4 +32,26 @@
   cursor: pointer;
   width: 100%;
   font-weight: 600;
+}
+.containerImg {
+  height: 50%;
+}
+.containerImg img {
+  width: 100%;
+  height: 100%;
+}
+.containerInfo {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.containerLabel {
+  display: flex;
+  justify-content: flex-end;
+}
+.label {
+  background-color: rgba(75, 211, 81, 0.13);
+  border-radius: 4px;
+  padding: 4px 29px;
 }

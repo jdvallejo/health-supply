@@ -4,22 +4,28 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import * as styles from "./ProductCard.module.css";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
   return (
     <div className={styles.container}>
-      <GatsbyImage
-        image={getImage(product.imagen?.localFile)}
-        alt={product.cover?.alternativeText}
-      />
-      <div>
-        <span className={styles.title}>
-          {product.nombreComercial} - presentación en {product.presentacion}
-        </span>
-        <p>{product.descripcion}</p>
+      <div className={styles.containerImg}>
+        <GatsbyImage
+          image={getImage(product.imagen?.localFile)}
+          alt={product.cover?.alternativeText}
+        />
       </div>
-      <Link to={`/product/${product.slug}`}>
-        <button className={styles.button}>Ver medicamento</button>
-      </Link>
+      <div className={styles.containerInfo}>
+        <div className={styles.containerLabel}>
+          <span className={styles.label}>{product.label?.titulo}</span>
+        </div>
+        <div>
+          <span className={styles.title}>
+            {product.nombreComercial} - presentación en {product.presentacion}
+          </span>
+          <p>{product.descripcion}</p>
+        </div>
+        <Link to={`/product/${product.slug}`}>
+          <button className={styles.button}>Ver medicamento</button>
+        </Link>
+      </div>
     </div>
   );
 };

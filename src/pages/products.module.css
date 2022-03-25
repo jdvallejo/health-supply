@@ -1,12 +1,108 @@
-.container{
-    background-color: #E5E5E5;
-    padding: 10px;
+.container {
+  background-color: #f5f6fa;
+  padding: 20px;
 }
-.containerSearch{
-    display: grid; 
-  grid-template-columns: 2.2fr 0.8fr; 
-  grid-template-rows: 1fr; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    ". ."; 
+.containerActions {
+  display: grid;
+  grid-template-columns: 2.2fr 0.8fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+}
+.title {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 3.69231px;
+  text-transform: uppercase;
+}
+.containerTitle {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+input[type="text"] {
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 25px 0px 0px 25px;
+  width: 100%;
+
+  font-size: 16px;
+  background-color: white;
+
+  padding: 12px 20px 12px 40px;
+}
+.containerSearch {
+  display: flex;
+  justify-content: center;
+}
+.searchButton {
+  background-color: #014c7c;
+  border-radius: 0px 25px 25px 0px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 27%;
+  font-weight: 600;
+}
+.dropbtn {
+  background-color: #ffffff;
+  color: #014c7c;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #014c7c;
+  width: 220px;
+  display: flex;
+  border-radius: 4px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdownContent {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #014c7c;
+  color: white;
+}
+.containerFilter {
+  display: flex;
+  justify-content: flex-end;
+}
+.chevron {
+  font-size: 50px;
 }
