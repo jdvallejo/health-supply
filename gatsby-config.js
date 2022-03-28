@@ -30,7 +30,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-transformer-remark",
     {
@@ -40,7 +39,6 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
-    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
