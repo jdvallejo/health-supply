@@ -196,7 +196,7 @@ const Formulario = () => {
                   </Row>
 
                   <Row className="mt-4 mt-md-5 text-center">
-                    <Col md={12} controlId="formGridPassword mx-auto">
+                    <Col md={12} controlid="formGridPassword mx-auto">
                       <Button
                         variant="primary"
                         type="submit"

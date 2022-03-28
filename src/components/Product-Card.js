@@ -7,10 +7,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className={styles.container}>
       <div className={styles.containerImg}>
-        <GatsbyImage
-          image={getImage(product.imagen?.localFile)}
-          alt={product.cover?.alternativeText}
-        />
+        <GatsbyImage image={getImage(product.imagen?.localFile)} alt="" />
       </div>
       <div className={styles.containerInfo}>
         <div className={styles.containerLabel}>
