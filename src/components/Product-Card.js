@@ -14,9 +14,7 @@ const ProductCard = ({ product }) => {
           <span className={styles.label}>{product.label?.titulo}</span>
         </div>
         <div>
-          <span className={styles.title}>
-            {product.nombreComercial} - presentación en {product.presentacion}
-          </span>
+          <span className={styles.title}>{product.nombreComercial}</span>
           <p>{product.descripcion}</p>
         </div>
         <Link to={`/product/${product.slug}`}>
