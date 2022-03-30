@@ -9,8 +9,19 @@ import { StaticImage } from "gatsby-plugin-image";
 import logo1 from "../images/assets/health-supply-logo.png";
 import logo2 from "../images/assets/health-supply-logo-white.png";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import SpecialityList from "./Speciality-List";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Menu = () => {
+  const { allStrapiSpeciality } = useStaticQuery(graphql`
+    query {
+      allStrapiSpeciality {
+        nodes {
+          ...SpecialityItem
+        }
+      }
+    }
+  `);
   const { t } = useTranslation();
   const { originalPath } = useI18next();
 
@@ -67,7 +78,6 @@ const Menu = () => {
             >
               {t("menu.opcion2")}
             </AnchorLink>
-
             {/* <NavDropdown
               title="Empresa"
               className={navbar ? "nav-link-light active" : "nav-link-light"}
@@ -80,7 +90,6 @@ const Menu = () => {
                 EMPRESA 2
               </NavDropdown.Item>
             </NavDropdown> */}
-
             <AnchorLink
               as={Link}
               to={t("scroll.opcion3")}
@@ -93,49 +102,10 @@ const Menu = () => {
               {t("menu.opcion3")}
             </AnchorLink>
 
-            <NavDropdown title="Especialidades">
-              <NavDropdown.Item
-                as={Link}
-                to="/"
-                /* className={
-                  navbar
-                    ? "nav-link nav-link-light active"
-                    : "nav-link nav-link-light"
-                } */
-
-                className="d-flex align-items-center py-2"
-              >
-                <figure className="menu-especialidad">
-                  <StaticImage
-                    alt="health supply"
-                    src="../images/assets/especialidades/dermatologia.svg"
-                    style={{ height: "100%", width: "100%" }}
-                    imgStyle={{ objectFit: "contain" }}
-                  />
-                </figure>
-                <span className="pt-1">Dermatología</span>
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={Link}
-                to="/"
-                className="d-flex align-items-center py-2"
-              >
-                <figure className="menu-especialidad">
-                  <StaticImage
-                    alt="health supply"
-                    src="../images/assets/especialidades/pulmonologia.svg"
-                    style={{ height: "100%", width: "100%" }}
-                    imgStyle={{ objectFit: "contain" }}
-                  />
-                </figure>
-                <span className="">Pulmonología</span>
-              </NavDropdown.Item>
-              {/* <NavDropdown.Divider /> */}
-              {/* <NavDropdown.Item as={Link} to="/">
-                MEDICINA 2
-              </NavDropdown.Item> */}
-            </NavDropdown>
-
+            <SpecialityList
+              specialities={allStrapiSpeciality.nodes}
+              key={allStrapiSpeciality.nodes}
+            />
             <AnchorLink
               as={Link}
               to={t("scroll.opcion4")}
@@ -147,7 +117,6 @@ const Menu = () => {
             >
               {t("menu.opcion5")}
             </AnchorLink>
-
             <Nav.Link
               as={Link}
               to={originalPath}

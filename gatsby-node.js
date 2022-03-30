@@ -3,12 +3,17 @@ const path = require("path");
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  // Define a template for blog post
-  const productPost = path.resolve("./src/templates/product-post.js");
+  const specialityPage = path.resolve("./src/templates/speciality-page.js");
 
   const result = await graphql(
     `
       {
+        allStrapiSpeciality {
+          nodes {
+            nombre
+            slug
+          }
+        }
         allStrapiProduct {
           nodes {
             nombreComercial
@@ -21,12 +26,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your Strapi products`,
+      `There was an error loading your Strapi Pages`,
       result.errors
     );
 
     return;
   }
+
+  const specialities = result.data.allStrapiSpeciality.nodes;
+
+  if (specialities.length > 0) {
+    specialities.forEach((speciality) => {
+      createPage({
+        path: `/speciality/${speciality.slug}`,
+        component: specialityPage,
+        context: {
+          slug: speciality.slug,
+        },
+      });
+    });
+  }
+
+  const productPost = path.resolve("./src/templates/product-post.js");
 
   const products = result.data.allStrapiProduct.nodes;
 
