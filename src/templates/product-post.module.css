@@ -5,7 +5,6 @@
 }
 .containerImg {
   width: 50%;
-
   background-position: center;
   background-repeat: no-repeat;
   margin: 80px;
@@ -15,7 +14,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .navegation {
   display: flex;
@@ -32,4 +31,57 @@
 .image {
   width: 100%;
   height: 100%;
+}
+.button {
+  background: #014c7c;
+  border: 1px solid #005082;
+  box-sizing: border-box;
+  border-radius: 25px;
+  color: white;
+  width: 35%;
+}
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: #cacfe2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
+
+  text-align: right;
+  letter-spacing: 3.62267px;
+  text-transform: uppercase;
+
+  color: #005082;
+}
+.segment {
+  margin-top: 10px;
+  background: #0d84ce;
+  width: 8%;
+  height: 10px;
+  margin-bottom: 20px;
+}
+.titleProduct {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  /* or 142% */
+
+  letter-spacing: 3.69231px;
+  text-transform: uppercase;
+
+  color: #333337;
+}
+.sectionInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

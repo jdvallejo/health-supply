@@ -24,9 +24,32 @@ const ProductPage = ({ data }) => {
           />
         </div>
         <div className={styles.productInfo}>
-          <h1 className={styles.title}>{product.nombreComercial}</h1>
+          <h1 className={styles.titleProduct}>{product.nombreComercial}</h1>
+          <div className={styles.segment}></div>
           <p className={styles.description}>{product.descripcion}</p>
+          <div className={styles.divider}></div>
+          <div>
+            <span className={styles.title}>LABORATORIO:</span>
+            <span>{product.aprobadoPor}</span>
+          </div>
+          <div className={styles.divider}></div>
+          <div>
+            <span className={styles.title}>PRESENTACION:</span>
+            <span>{product.presentacion}</span>
+          </div>
+          <div className={styles.divider}></div>
+          <div>
+            <button className={styles.button}>Ordenar Medicamento</button>
+          </div>
         </div>
+      </div>
+      <div className={styles.sectionInfo}>
+        <div className={styles.divider}></div>
+        <span>
+          Health Supply pude ayudarte importando o consiguiendo el procucto y
+          posteriormente contactando contigo para su posterior entrega.
+        </span>
+        <div className={styles.divider}></div>
       </div>
     </Layout>
   );
@@ -40,6 +63,7 @@ export const pageQuery = graphql`
       nombreComercial
       descripcion
       presentacion
+      aprobadoPor
       imagen {
         localFile {
           childImageSharp {

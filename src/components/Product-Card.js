@@ -33,6 +33,7 @@ export const query = graphql`
     compuestoPrincipal
     presentacion
     descripcion
+    position
     label {
       titulo
     }

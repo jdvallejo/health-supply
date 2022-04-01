@@ -8,19 +8,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import * as styles from "./product-post.module.css";
 import ProductGridSection from "../components/Product-Grid-Section";
+import { SpecialitySection } from "../components/SpecialitySection";
 
 const SpecialityPage = ({ data }) => {
   const speciality = data.strapiSpeciality;
 
-  console.log(speciality);
-
-  // const seo = {
-  //   metaTitle: speciality.product,
-  //   metaDescription: speciality.descripcion,
-  //   shareImage: speciality.imagen,
-  // };
+  const seo = {
+    metaTitle: speciality.product,
+    metaDescription: speciality.descripcion,
+    shareImage: speciality.imagen,
+  };
 
   return (
     <Layout as="speciality">
@@ -41,22 +39,8 @@ const SpecialityPage = ({ data }) => {
           />
         </Helmet> */}
 
-        {/* Speciality section */}
-        <div className={styles.navegation}></div>
-        <div className={styles.container}>
-          <div className={styles.containerImg}>
-            <GatsbyImage
-              image={getImage(speciality?.imagen?.localFile)}
-              className={styles.image}
-            />
-          </div>
-          <div className={styles.specialityInfo}>
-            <h1 className={styles.title}>{speciality.nombre}</h1>
-            <p className={styles.description}>
-              {speciality.descripcion.data.descripcion}
-            </p>
-          </div>
-        </div>
+        {/* <div className={styles.navegation}></div> */}
+        <SpecialitySection speciality={speciality} key={speciality.nombre} />
 
         <ProductGridSection />
       </main>

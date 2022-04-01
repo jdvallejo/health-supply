@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
 import Layout from "./Layout";
 import Helmet from "react-helmet";
-import { SectionSpec } from "./SectionSpec";
+import { SectionSpec } from "./SpecialitySection";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

@@ -22,6 +22,7 @@ const Menu = () => {
       }
     }
   `);
+
   const { t } = useTranslation();
   const { originalPath } = useI18next();
 
