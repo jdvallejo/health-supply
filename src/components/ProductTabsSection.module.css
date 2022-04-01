@@ -1,0 +1,8 @@
+.tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 22px 113px;
+  background-color: #cacfe266;
+  mix-blend-mode: normal;
+}

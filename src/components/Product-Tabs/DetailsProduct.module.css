@@ -1,0 +1,44 @@
+.rowWhite {
+  background: #d7e0ea30;
+  display: flex;
+
+  height: 40px;
+  align-items: center;
+}
+.rowGray {
+  background: #aec6d752;
+  display: flex;
+
+  height: 40px;
+  align-items: center;
+}
+.container {
+  width: 1000px;
+}
+.value {
+  width: 50%;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 1px;
+
+  color: #333337;
+}
+.title {
+  width: 50%;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: 1px;
+
+  color: #333337;
+  margin-left: 20px;
+}

@@ -1,11 +1,15 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import * as styles from "./product-post.module.css";
+import { ProductTabsSection } from "../components/Product-Tabs-Section";
 
 const ProductPage = ({ data }) => {
   const product = data.strapiProduct;
+  const MHRA = "../images/icons/mhra.svg";
+  const EMA = "../images/icons/ema.svg";
+  const FDA = ".../images/icons/fda.svg";
 
   const seo = {
     metaTitle: product.nombreComercial,
@@ -50,6 +54,12 @@ const ProductPage = ({ data }) => {
           posteriormente contactando contigo para su posterior entrega.
         </span>
         <div className={styles.divider}></div>
+      </div>
+      <ProductTabsSection />
+      <div className={styles.brands}>
+        <StaticImage src={MHRA} alt="Bed" />
+        <StaticImage src={EMA} alt="Bed" />
+        <StaticImage src={EMA} alt="Bed" />
       </div>
     </Layout>
   );
