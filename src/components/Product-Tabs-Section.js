@@ -13,7 +13,7 @@ function callback(key) {
   console.log(key);
 }
 
-export const ProductTabsSection = () => {
+export const ProductTabsSection = ({ product }) => {
   return (
     <div className={styles.tabs}>
       <Tabs defaultActiveKey="1" centered>
@@ -21,7 +21,7 @@ export const ProductTabsSection = () => {
           <DescripctionProduct />
         </TabPane>
         <TabPane tab="DETALLES - FICHA DE DATOS" key="2">
-          <DetailsProduct />
+          <DetailsProduct product={product} />
         </TabPane>
         <TabPane tab="DATOS DE CONTACTO" key="3">
           <DataProduct />

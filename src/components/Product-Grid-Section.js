@@ -9,8 +9,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import * as styles from "./products.module.css";
 import ProductsGrid from "./Products-Grid";
+import { useState } from "react";
 
 const ProductGridSection = () => {
+  const [text, setText] = useState("default");
+
   const { allStrapiProduct } = useStaticQuery(graphql`
     query {
       allStrapiProduct {
@@ -32,7 +35,13 @@ const ProductGridSection = () => {
 
       <div className={styles.containerActions}>
         <div className={styles.containerSearch}>
-          <input type="text" placeholder="¿Qué medicamento buscas?"></input>
+          <input
+            placeholder="¿Qué medicamento buscas?"
+            type="text"
+            name="text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          ></input>
           <button className={styles.searchButton}>Buscar</button>
         </div>
         <div className={styles.containerFilter}>
@@ -46,7 +55,11 @@ const ProductGridSection = () => {
           </div>
         </div>
       </div>
-      <ProductsGrid products={allStrapiProduct.nodes} />
+      <ProductsGrid
+        products={allStrapiProduct.nodes}
+        search={text}
+        key={text}
+      />
     </div>
   );
 };

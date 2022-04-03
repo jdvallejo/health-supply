@@ -9,7 +9,7 @@ const ProductPage = ({ data }) => {
   const product = data.strapiProduct;
   const MHRA = "../images/icons/mhra.svg";
   const EMA = "../images/icons/ema.svg";
-  const FDA = ".../images/icons/fda.svg";
+  const FDA = ".../images/icons/fdaa.svg";
 
   const seo = {
     metaTitle: product.nombreComercial,
@@ -55,11 +55,11 @@ const ProductPage = ({ data }) => {
         </span>
         <div className={styles.divider}></div>
       </div>
-      <ProductTabsSection />
+      <ProductTabsSection product={product} />
       <div className={styles.brands}>
         <StaticImage src={MHRA} alt="Bed" />
-        <StaticImage src={EMA} alt="Bed" />
-        <StaticImage src={EMA} alt="Bed" />
+        <StaticImage src={EMA} alt="S" />
+        <StaticImage src={FDA} alt="SA" />
       </div>
     </Layout>
   );
@@ -71,9 +71,13 @@ export const pageQuery = graphql`
       id
       slug
       nombreComercial
+      especialidades {
+        nombre
+      }
       descripcion
       presentacion
       aprobadoPor
+      laboratorio
       imagen {
         localFile {
           childImageSharp {
