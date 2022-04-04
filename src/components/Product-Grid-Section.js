@@ -12,7 +12,7 @@ import ProductsGrid from "./Products-Grid";
 import { useState } from "react";
 
 const ProductGridSection = () => {
-  const [text, setText] = useState("default");
+  const [text, setText] = useState("");
 
   const { allStrapiProduct } = useStaticQuery(graphql`
     query {

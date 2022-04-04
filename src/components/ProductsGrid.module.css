@@ -4,3 +4,18 @@
   gap: 50px 70px;
   padding: 21px;
 }
+.productSearch {
+  margin-top: 30px;
+  font-family: "Quicksand";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 46px;
+  /* identical to box height, or 194% */
+
+  text-align: center;
+  letter-spacing: 1px;
+  font-feature-settings: "salt" on, "liga" off;
+
+  color: #333337;
+}

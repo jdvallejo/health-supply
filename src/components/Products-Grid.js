@@ -18,11 +18,18 @@ const ProductsGrid = ({ products, search }) => {
     );
   });
 
+  const exist = products.length === 0;
+
   return (
     <div className={style.containerProducts}>
       {productsList.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}
+      {exist && (
+        <div className={style.productSearch}>
+          No se encuentran resultados con tu busqueda. El medicamento no existe
+        </div>
+      )}
     </div>
   );
 };
