@@ -7,6 +7,7 @@ import { ProductTabsSection } from "../components/Product-Tabs-Section";
 
 const ProductPage = ({ data }) => {
   const product = data.strapiProduct;
+  console.log(product);
   const MHRA = "../images/icons/mhra.svg";
   const EMA = "../images/icons/ema.svg";
   const FDA = ".../images/icons/fdaa.svg";

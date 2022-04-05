@@ -20,7 +20,7 @@ export const DetailsProduct = ({ product }) => {
         <span className={styles.title}>Laboratorio</span>
         <span className={styles.value}>{product.laboratorio}</span>
       </div>
-      <div className={styles.rowGray}>
+      <div className={styles.browGray}>
         <span className={styles.title}>Aprobado por </span>
         <span className={styles.value}>{product.aprobadoPor}</span>
       </div>

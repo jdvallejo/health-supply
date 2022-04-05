@@ -34,6 +34,9 @@ export const query = graphql`
     presentacion
     descripcion
     position
+    especialidades {
+      nombre
+    }
     label {
       titulo
     }

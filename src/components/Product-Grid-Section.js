@@ -10,15 +10,24 @@ import "swiper/css/pagination";
 import * as styles from "./products.module.css";
 import ProductsGrid from "./Products-Grid";
 import { useState } from "react";
+import { Select } from "antd";
+
+const { Option } = Select;
 
 const ProductGridSection = () => {
   const [text, setText] = useState("");
+  const [filtreText, setFiltreText] = useState("");
 
-  const { allStrapiProduct } = useStaticQuery(graphql`
+  const { allStrapiProduct, allStrapiSpeciality } = useStaticQuery(graphql`
     query {
       allStrapiProduct {
         nodes {
           ...ProductCard
+        }
+      }
+      allStrapiSpeciality {
+        nodes {
+          nombre
         }
       }
     }
@@ -26,6 +35,12 @@ const ProductGridSection = () => {
 
   const { t } = useTranslation();
   const i18n = useI18next();
+
+  function handleChange(value) {
+    setFiltreText(value);
+  }
+
+  console.log(allStrapiProduct.nodes);
 
   return (
     <div className={styles.container}>
@@ -45,20 +60,38 @@ const ProductGridSection = () => {
           <button className={styles.searchButton}>Buscar</button>
         </div>
         <div className={styles.containerFilter}>
-          <div className={styles.dropdown}>
-            <button className={styles.dropbtn}>Filtrar por</button>
-            <div className={styles.dropdownContent}>
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
+          <Select
+            size="large"
+            bordered={false}
+            className={styles.dropbtn}
+            showSearch
+            allowClear
+            style={{ width: 200 }}
+            placeholder="Filtrar por"
+            optionFilterProp="children"
+            value={filtreText}
+            onChange={handleChange}
+            filterOption={(input, option) =>
+              option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+            }
+            filterSort={(optionA, optionB) =>
+              optionA.children
+                .toLowerCase()
+                .localeCompare(optionB.children.toLowerCase())
+            }
+          >
+            {allStrapiSpeciality.nodes.map((speciality) => (
+              <Option value={speciality.nombre}>{speciality.nombre}</Option>
+            ))}
+          </Select>
+          ,
         </div>
       </div>
       <ProductsGrid
         products={allStrapiProduct.nodes}
         search={text}
         key={text}
+        filtre={filtreText}
       />
     </div>
   );

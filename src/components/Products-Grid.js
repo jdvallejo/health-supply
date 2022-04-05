@@ -2,7 +2,19 @@ import React from "react";
 import ProductCard from "./Product-Card";
 import * as style from "./ProductsGrid.module.css";
 
-const ProductsGrid = ({ products, search }) => {
+const ProductsGrid = ({ products, search, filtre }) => {
+  if (filtre !== undefined) {
+    let filterlist = [];
+    products.forEach((product) => {
+      product.especialidades.forEach((especialidad) => {
+        if (especialidad.nombre === filtre) {
+          filterlist.push(product);
+        }
+      });
+    });
+    products = filterlist;
+  }
+
   products = products.filter((product) => {
     if (product.nombreComercial.toLowerCase().includes(search.toLowerCase())) {
       return product;
