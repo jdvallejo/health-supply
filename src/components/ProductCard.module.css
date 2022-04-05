@@ -3,7 +3,8 @@
   border-radius: 8px;
   padding: 20px;
   text-decoration: none;
-  min-height: 600px;
+  max-height: 600px;
+  max-width: 426px;
 }
 
 .container:hover {

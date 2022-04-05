@@ -4,11 +4,16 @@
 }
 .containerActions {
   display: grid;
-  grid-template-columns: 2.2fr 0.8fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: ". .";
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
+
+@media (max-width: 1200px) {
+  .containerActions {
+    justify-items: center;
+  }
+}
+  
+
 .title {
   font-size: 23px;
   font-weight: 600;
@@ -100,7 +105,7 @@ input[type="text"] {
 }
 .containerFilter {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; 
 }
 .chevron {
   font-size: 50px;
