@@ -66,7 +66,7 @@ const ProductGridSection = () => {
             className={styles.dropbtn}
             showSearch
             allowClear
-            style={{ width: 200 }}
+            style={{ width: 293 }}
             placeholder="Filtrar por"
             optionFilterProp="children"
             value={filtreText}

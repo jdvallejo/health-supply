@@ -10,7 +10,12 @@
 @media (max-width: 1200px) {
   .containerActions {
     justify-items: center;
+    gap: 23px;
   }
+  .containerSearch{
+    margin-top: 15px;
+  }
+  
 }
   
 
@@ -25,6 +30,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  text-align: center;
 }
 input[type="text"] {
   background: #ffffff;

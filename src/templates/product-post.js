@@ -50,8 +50,8 @@ const ProductPage = ({ data }) => {
       </div>
       <div className={styles.sectionInfo}>
         <div className={styles.divider}></div>
-        <span>
-          Health Supply pude ayudarte importando o consiguiendo el procucto y
+        <span className={styles.textHealth}>
+          Health Supply puede ayudarte importando o consiguiendo el procucto y
           posteriormente contactando contigo para su posterior entrega.
         </span>
         <div className={styles.divider}></div>

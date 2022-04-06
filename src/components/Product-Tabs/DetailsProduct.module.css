@@ -1,17 +1,48 @@
 .rowWhite {
   background: #d7e0ea30;
   display: flex;
-
   height: 40px;
   align-items: center;
 }
 .rowGray {
   background: #aec6d752;
   display: flex;
-
   height: 40px;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .rowWhite {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 65px;
+
+  }
+  .rowGray {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 65px;
+
+  }
+  .title{
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+}
+  
+@media (min-width: 769px) {
+  .title {
+    margin-left: 20px;
+  }
+}
+  
+
+
+
 .container {
   width: 1000px;
 }
@@ -38,7 +69,15 @@
   /* identical to box height, or 150% */
 
   letter-spacing: 1px;
-
   color: #333337;
-  margin-left: 20px;
 }
+.textHealth{
+
+}
+
+@media (max-width: 768px) {
+.textHealth{
+  margin: 10px;
+}
+}
+  

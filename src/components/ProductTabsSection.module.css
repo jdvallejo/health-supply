@@ -6,3 +6,11 @@
   background-color: #cacfe266;
   mix-blend-mode: normal;
 }
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+}
+  
