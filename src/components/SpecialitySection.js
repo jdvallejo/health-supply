@@ -17,6 +17,7 @@ export const SpecialitySection = ({ speciality }) => {
             <GatsbyImage
               image={getImage(speciality?.imagen?.localFile)}
               className={styles.image}
+              alt={speciality.nombre}
             />
           </figure>
         </div>

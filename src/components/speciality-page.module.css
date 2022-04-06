@@ -33,6 +33,9 @@
   .image {
  display: none;
   }
+  .containerImg{
+    display: none;
+  }
 }
 .information {
   display: flex;
