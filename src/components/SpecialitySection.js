@@ -13,7 +13,7 @@ export const SpecialitySection = ({ speciality }) => {
           <div>{speciality.descripcion.data.descripcion}</div>
         </div>
         <div className={styles.containerImg}>
-          <figure>
+          <figure className={styles.image}>
             <GatsbyImage
               image={getImage(speciality?.imagen?.localFile)}
               className={styles.image}
