@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocalStorage } from "../hooks/useLocaleStorage";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "./productsSelected.module.css";
+import * as styles from "./ProductsSelected.module.css";
 import { DeleteOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
 
