@@ -4,7 +4,7 @@ import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import * as styles from "./product-post.module.css";
 import { ProductTabsSection } from "../components/Product-Tabs-Section";
-import { Drawer, InputNumber } from "antd";
+import { Drawer, InputNumber, message } from "antd";
 import { ProductsSelected } from "../components/ProductsSelected";
 import { useLocalStorage } from "../hooks/useLocaleStorage";
 
@@ -15,12 +15,19 @@ const ProductPage = ({ data }) => {
   const EMA = "../images/icons/ema.svg";
   const FDA = ".../images/icons/fdaa.svg";
 
-  const [parentData, setParentData] = useState([]);
+  const [products, setProducts] = useLocalStorage("products", []);
   const [visible, setVisible] = useState(false);
 
   const addProductToCart = () => {
     product.quantity = productQuantity;
-    setParentData(product);
+    const index = products.findIndex((item) => item.id === product.id);
+
+    if (index === -1) {
+      setProducts([...products, product]);
+      console.log(products.length);
+    } else {
+      message.warning("Ya existe este producto en la lista");
+    }
     setVisible(!visible);
   };
 
@@ -110,7 +117,7 @@ const ProductPage = ({ data }) => {
           <button className={styles.buttonList}>Ver todo</button>
         </Link>
 
-        <ProductsSelected parentData={parentData} />
+        <ProductsSelected products={products} setProducts={setProducts} />
       </Drawer>
     </>
   );
