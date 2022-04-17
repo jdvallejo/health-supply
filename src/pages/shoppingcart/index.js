@@ -17,8 +17,8 @@ const ShoppingCart = () => {
 
   return (
     <Layout>
+      <div className={secondstyles.menu}></div>
       <div className={secondstyles.containerInfo}>
-        <div className={secondstyles.margin}></div>
         <h1 className={secondstyles.title}>Lista de Medicamentos a Ordenar</h1>
         <div className={secondstyles.segment}></div>
         <div>

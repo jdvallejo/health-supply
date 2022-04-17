@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import * as styles from "../components/speciality-page.module.css";
 import ProductGridSection from "../components/Product-Grid-Section";
 import { SpecialitySection } from "../components/SpecialitySection";
 
@@ -43,7 +43,7 @@ const SpecialityPage = ({ data }) => {
           />
         </Helmet> */}
 
-        {/* <div className={styles.navegation}></div> */}
+        <div className={styles.menu}></div>
         <SpecialitySection speciality={speciality} key={speciality.nombre} />
 
         <ProductGridSection />

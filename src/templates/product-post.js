@@ -49,6 +49,7 @@ const ProductPage = ({ data }) => {
   return (
     <>
       <Layout as="product">
+        <div className={styles.menu}></div>
         <div className={styles.navegation}></div>
         <div className={styles.container}>
           <div className={styles.containerImg}>
