@@ -7,8 +7,13 @@ import { ProductTabsSection } from "../components/Product-Tabs-Section";
 import { Drawer, InputNumber, message } from "antd";
 import { ProductsSelected } from "../components/ProductsSelected";
 import { useLocalStorage } from "../hooks/useLocaleStorage";
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
 
 const ProductPage = ({ data }) => {
+  const { t } = useTranslation();
+  const i18n = useI18next();
+  const currentLanguage = i18n.language;
+
   const product = data.strapiProduct;
   console.log(product);
   const MHRA = "../images/icons/mhra.svg";
@@ -124,7 +129,7 @@ const ProductPage = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query ($slug: String) {
+  query ($slug: String, $language: String!) {
     strapiProduct(slug: { eq: $slug }) {
       id
       slug
@@ -141,6 +146,15 @@ export const pageQuery = graphql`
           childImageSharp {
             gatsbyImageData(aspectRatio: 1.77)
           }
+        }
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
         }
       }
     }

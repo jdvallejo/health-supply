@@ -66,7 +66,15 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={Link} to={t("scroll.opcion1")}>
+            <Nav.Link
+              as={Link}
+              to={t("scroll.opcion1")}
+              className={
+                navbar
+                  ? "nav-link nav-link-light active"
+                  : "nav-link nav-link-light"
+              }
+            >
               {t("menu.opcion1")}
             </Nav.Link>
             <AnchorLink
@@ -104,6 +112,7 @@ const Menu = () => {
             </AnchorLink>
 
             <SpecialityList
+              navbar={navbar}
               specialities={allStrapiSpeciality.nodes}
               key={allStrapiSpeciality.nodes}
             />

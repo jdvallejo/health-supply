@@ -12,6 +12,10 @@ import ProductGridSection from "../components/Product-Grid-Section";
 import { SpecialitySection } from "../components/SpecialitySection";
 
 const SpecialityPage = ({ data }) => {
+  const { t } = useTranslation();
+  const i18n = useI18next();
+  const currentLanguage = i18n.language;
+
   const speciality = data.strapiSpeciality;
 
   const seo = {
@@ -49,7 +53,7 @@ const SpecialityPage = ({ data }) => {
 };
 
 export const pageQuery = graphql`
-  query ($slug: String) {
+  query ($slug: String, $language: String!) {
     strapiSpeciality(slug: { eq: $slug }) {
       nombre
       locale
@@ -64,6 +68,15 @@ export const pageQuery = graphql`
           childImageSharp {
             gatsbyImageData(aspectRatio: 1.77)
           }
+        }
+      }
+    }
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
         }
       }
     }

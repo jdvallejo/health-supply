@@ -7,8 +7,12 @@ import * as secondstyles from "./shoppingcart.module.css";
 import { useLocalStorage } from "../../hooks/useLocaleStorage";
 import { DeleteFilled } from "@ant-design/icons";
 import { InputNumber } from "antd";
+import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
 
 const ShoppingCart = () => {
+  const { t } = useTranslation();
+  const i18n = useI18next();
+  const currentLanguage = i18n.language;
   const [products, setProducts] = useLocalStorage("products", []);
 
   return (
@@ -36,6 +40,21 @@ const ShoppingCart = () => {
     </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;
+
 export default ShoppingCart;
 
 const ProductCard = ({ product, products, setProducts }) => {
