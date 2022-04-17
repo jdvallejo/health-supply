@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #f5f6fa;
+  padding: 10px;
+  flex-direction: column;
+  gap: 10px;
+}
+.button{
+  background-color: #ffffff;
+  border-radius: 25px;
+  border: 1px solid #005082;
+  color: #005082;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px
+}
+.margin{
+height: 70px;
+}
+.title{
+
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+letter-spacing: 3.69231px;
+text-transform: uppercase;
+
+color: #333337;
+}
+.segment {
+  margin-top: 10px;
+  background: #0d84ce;
+  width: 8%;
+  height: 10px;
+  margin-bottom: 20px;
+}
+.containerInfo{
+  padding: 20px;
+}
+
+.containerCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  max-height: 600px;
+  max-width: 426px;
+}
+
+@media screen and (min-width: 768px) {
+  .containerCard {
+    max-width: 100%;
+    display: flex;
+  }
+}
+.numberProduct{
+  border: black solid 1px;
+  border-radius: 25px 0px 0px 25px;
+    color: black;
+    width: 73px;
+    height: 100%;
+  }
+  

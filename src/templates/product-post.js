@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import * as styles from "./product-post.module.css";
@@ -106,7 +106,10 @@ const ProductPage = ({ data }) => {
         width={150}
         onClose={() => setVisible(!visible)}
       >
-        <button className={styles.buttonList}>Ver todo</button>
+        <Link to={`/shoppingcart`}>
+          <button className={styles.buttonList}>Ver todo</button>
+        </Link>
+
         <ProductsSelected parentData={parentData} />
       </Drawer>
     </>
