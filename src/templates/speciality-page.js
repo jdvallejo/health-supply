@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, navigate } from "gatsby";
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
 import Layout from "../components/Layout";
 import Helmet from "react-helmet";
@@ -16,7 +16,14 @@ const SpecialityPage = ({ data }) => {
   const i18n = useI18next();
   const currentLanguage = i18n.language;
 
-  const speciality = data.strapiSpeciality;
+  let speciality = data.strapiSpeciality;
+if( speciality.locale !== currentLanguage){
+// redirect to english page
+  navigate(`/speciality/${speciality.localizations.data[0].attributes.slug}`);
+}
+
+
+
 
   const seo = {
     metaTitle: speciality.product,
@@ -60,6 +67,15 @@ export const pageQuery = graphql`
       descripcion {
         data {
           descripcion
+        }
+      }
+      localizations {
+        data {
+          attributes {
+            nombre
+            locale
+            slug
+          }
         }
       }
       slug

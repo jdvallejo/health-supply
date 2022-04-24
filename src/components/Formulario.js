@@ -24,6 +24,68 @@ const Formulario = () => {
     setInteres(e.target.value);
   };
 
+  const saveStrapi = async (e) => {
+    e.preventDefault();
+    const data = {
+      nombres,
+      email,
+      telefono,
+      pais,
+      mensaje,
+      interes,
+    };
+    try {
+      await axios.post(
+        "https://api.strapi.io/graphql",
+        {
+          query: `mutation {
+            createContact(data: {
+              name: "${nombres}",
+              email: "${email}",
+              telephone: "${telefono}",
+              country: "${pais}",
+              message: "${mensaje}",
+              interes: "${interes}"
+            }) {
+              id
+              nombres
+              email
+              telefono
+              pais
+              mensaje
+              interes
+            }
+          }`,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.GATSBY_STRAPI_KEY}`,
+          },
+        }
+      );
+      Swal.fire({
+        title: "¡Gracias!",
+        text: "Su mensaje ha sido enviado correctamente",
+        icon: "success",
+        confirmButtonText: "Ok",
+      });
+      setNombres("");
+      setEmail("");
+      setTelefono("");
+      setPais("");
+      setMensaje("");
+      setInteres("");
+    } catch (error) {
+      Swal.fire({
+        title: "¡Error!",
+        text: "Ha ocurrido un error, por favor intente nuevamente",
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     // setActiveSpinner(true);

@@ -11,6 +11,7 @@ export function useLocalStorage(key, initialValue) {
     }
   });
 
+
   const setValue = (value) => {
     try {
       setStoredValue(value);

@@ -21,9 +21,19 @@ module.exports = {
           },
           {
             singularName: "label",
+            pluginOptions: {
+              i18n: {
+                locale: "all", // Fetch all localizations
+              },
+            },
           },
           {
             singularName: "speciality",
+            pluginOptions: {
+              i18n: {
+                locale: "all", // Fetch all localizations
+              },
+            },
           },
         ],
         singleTypes: [],

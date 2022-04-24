@@ -8,12 +8,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const result = await graphql(
     `
       {
-        allStrapiSpeciality {
-          nodes {
+ allStrapiSpeciality {
+    nodes {
+      nombre
+      slug
+      locale
+      localizations {
+        data {
+          attributes {
             nombre
             slug
+            locale
           }
         }
+      }
+    }
+  }
         allStrapiProduct {
           nodes {
             nombreComercial

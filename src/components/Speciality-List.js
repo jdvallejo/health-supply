@@ -11,6 +11,11 @@ const SpecialityList = ({ navbar, specialities }) => {
   const i18n = useI18next();
   const currentLanguage = i18n.language;
 
+  //filter specialities by current language
+  specialities = specialities.filter(
+    (speciality) => speciality.locale === currentLanguage
+  );
+
   return (
     <NavDropdown
       title={t("menu.opcion4")}
@@ -47,6 +52,7 @@ export const query = graphql`
     id
     slug
     nombre
+    locale
     descripcion {
       data {
         descripcion
