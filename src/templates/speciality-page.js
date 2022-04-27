@@ -14,10 +14,11 @@ import { SpecialitySection } from "../components/SpecialitySection";
 const SpecialityPage = ({ data }) => {
   const i18n = useI18next();
   const currentLanguage = i18n.language;
+  const isBrowser = () => typeof window !== "undefined"
 
   const speciality = data.strapiSpeciality;
 if( speciality.locale !== currentLanguage){
-  navigate(`/speciality/${speciality.localizations.data[0].attributes.slug}`);
+  isBrowser() && navigate(`/speciality/${speciality.localizations.data[0].attributes.slug}`);
 }
 
 //random key for component

@@ -13,11 +13,12 @@ const ProductPage = ({ data }) => {
   const { t } = useTranslation();
   const i18n = useI18next();
   const currentLanguage = i18n.language;
+  const isBrowser = () => typeof window !== "undefined"
 
   const product = data.strapiProduct;
   if( product.locale !== undefined && product.locale !== currentLanguage){
     if(product.localizations.data[0]?.attributes){
-      navigate(`/product/${product.localizations.data[0].attributes.slug}`);
+      isBrowser() && navigate(`/product/${product.localizations.data[0].attributes.slug}`);
     }else{
       console.log("No se encuentra este producto traducido");
     }
