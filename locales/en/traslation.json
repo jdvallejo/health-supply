@@ -90,5 +90,52 @@
     "paciente": "I am a patient",
     "profesional": "I am a health professional",
     "boton": "Send"
+  },
+  "specialityPage": {
+    "title": "SPECIALTY",
+    "searchTitle": "DRUGS SEARCHER",
+    "searchPlaceholder": "What medications are you looking for?",
+    "filterPlaceholder": "Filter By",
+    "searchButton": "Search",
+    "textNoResults": "No results were found for your search. The drug does not exist",
+    "buttonProduct": "View medication"
+  },
+  "productPage": {
+    "laboratory": "LABORATORY",
+    "presentation": "PRESENTATION",
+    "order": "Order Medication",
+    "description": "Health Supply can assist you by importing or obtaining the product and then contacting you for further delivery.",
+    "tab1": "DESCRIPTION",
+    "tab2": "DETAILS - DATA SHEET",
+    "tab3": "CONTACT DATA",
+    "drawerTitle": "List",
+    "drawerButton": "See all"
+  },
+  "DescriptionTab": {
+    "capsulesTitle": "The capsules: ",
+    "capsulesDescription": "they are small dissolvable containers, generally made of gelatin, inside which is the dose of the drug to be administered orally.",
+    "tablet2Title": "The tablets: ",
+    "tablet2Description": " they are solid pharmaceutical forms, generally round, with an exact dosage of the medicine contained inside.",
+    "pillTitle": "The pill: ",
+    "pillDescription": "is a colloquial term that is currently given to tablets and is defined as a solid pharmaceutical unit dosage form, prepared by molding or compression that contains active ingredient and excipients",
+    "tabletTitle": "Tablets: ",
+    "tabletDescription": "they are solid dosage unit dosage forms, obtained by mechanical compression of granules or mixtures of powders with one or more active ingredients, with the addition, in most cases, of various excipients"
+  },
+  "DetailTab": {
+    "speciality": "Speciality",
+    "presentation": "Pharmaceutical Presentation",
+    "laboratory": "Laboratory",
+    "approved": "Approved by"
+  },
+  "ContactTab": {
+    "office": "OUR OFFICES",
+    "telephone": "TELEPHONE DATA"
+  },
+  "ShoppingCart":{
+    "title": "List of medications to order",
+    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus."
+  },
+  "notifications": {
+    "alreadyAdded": "The medicine already exists in your list"
   }
 }

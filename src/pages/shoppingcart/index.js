@@ -11,20 +11,18 @@ import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
 
 const ShoppingCart = () => {
   const { t } = useTranslation();
-  const i18n = useI18next();
-  const currentLanguage = i18n.language;
+
   const [products, setProducts] = useLocalStorage("products", []);
 
   return (
     <Layout>
       <div className={secondstyles.menu}></div>
       <div className={secondstyles.containerInfo}>
-        <h1 className={secondstyles.title}>Lista de Medicamentos a Ordenar</h1>
+        <h1 className={secondstyles.title}>{t("ShoppingCart.title")}</h1>
         <div className={secondstyles.segment}></div>
         <div>
           {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
-          diam orci pretium a pharetra, feugiat cursus.
+          {t("ShoppingCart.description")}
         </div>
       </div>
       <div className={secondstyles.container}>
@@ -58,7 +56,13 @@ export const pageQuery = graphql`
 export default ShoppingCart;
 
 const ProductCard = ({ product, products, setProducts }) => {
+  const i18n = useI18next();
+  const currentLanguage = i18n.language;
   const [productQuantity, setProductQuantity] = useState(product.quantity);
+
+  if (product.locale !== currentLanguage){
+    product = product.localizations.data[0].attributes
+  }
 
   const removeProduct = (id) => {
     const newProducts = products.filter((y) => y.id !== id);

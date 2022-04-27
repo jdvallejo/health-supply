@@ -12,15 +12,16 @@ import ProductGridSection from "../components/Product-Grid-Section";
 import { SpecialitySection } from "../components/SpecialitySection";
 
 const SpecialityPage = ({ data }) => {
-  const { t } = useTranslation();
   const i18n = useI18next();
   const currentLanguage = i18n.language;
 
-  let speciality = data.strapiSpeciality;
+  const speciality = data.strapiSpeciality;
 if( speciality.locale !== currentLanguage){
-// redirect to english page
   navigate(`/speciality/${speciality.localizations.data[0].attributes.slug}`);
 }
+
+//random key for component
+const key = Math.random();
 
 
 
@@ -32,7 +33,7 @@ if( speciality.locale !== currentLanguage){
   };
 
   return (
-    <Layout as="speciality">
+    <Layout as="speciality" >
       <main>
         {/* <Helmet
           htmlAttributes={{
@@ -75,6 +76,7 @@ export const pageQuery = graphql`
             nombre
             locale
             slug
+            descripcion
           }
         }
       }

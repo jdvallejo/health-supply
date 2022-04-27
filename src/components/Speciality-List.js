@@ -20,7 +20,7 @@ const SpecialityList = ({ navbar, specialities }) => {
     <NavDropdown
       title={t("menu.opcion4")}
       className={
-        navbar ? "nav-link nav-link-light active" : "nav-link nav-link-light"
+        navbar ? " nav-link-light active" : " nav-link-light"
       }
     >
       {specialities.map((speciality) => (

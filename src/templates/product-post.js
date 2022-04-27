@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, graphql } from "gatsby";
+import {Link, graphql, navigate} from "gatsby";
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/Layout";
 import * as styles from "./product-post.module.css";
@@ -15,7 +15,17 @@ const ProductPage = ({ data }) => {
   const currentLanguage = i18n.language;
 
   const product = data.strapiProduct;
-  console.log(product);
+  if( product.locale !== undefined && product.locale !== currentLanguage){
+    if(product.localizations.data[0]?.attributes){
+      navigate(`/product/${product.localizations.data[0].attributes.slug}`);
+    }else{
+      console.log("No se encuentra este producto traducido");
+    }
+
+  }
+
+
+
   const MHRA = "../images/icons/mhra.svg";
   const EMA = "../images/icons/ema.svg";
   const FDA = ".../images/icons/fdaa.svg";
@@ -25,13 +35,13 @@ const ProductPage = ({ data }) => {
 
   const addProductToCart = () => {
     product.quantity = productQuantity;
-    const index = products.findIndex((item) => item.id === product.id);
+    const index = products.findIndex((item) => item.slug === product.slug);
+    const index2 = products.findIndex((item) => item.localizations.data[0].attributes.slug === product.slug);
 
-    if (index === -1) {
+    if (index === -1 && index2 === -1) {
       setProducts([...products, product]);
-      console.log(products.length);
     } else {
-      message.warning("Ya existe este producto en la lista");
+      message.warning(t("notifications.alreadyAdded"));
     }
     setVisible(!visible);
   };
@@ -64,12 +74,12 @@ const ProductPage = ({ data }) => {
             <p className={styles.description}>{product.descripcion}</p>
             <div className={styles.divider}></div>
             <div>
-              <span className={styles.title}>LABORATORIO:</span>
+              <span className={styles.title}>{t("productPage.laboratory")}:</span>
               <span>{product.aprobadoPor}</span>
             </div>
             <div className={styles.divider}></div>
             <div>
-              <span className={styles.title}>PRESENTACION:</span>
+              <span className={styles.title}>{t("productPage.presentation")}:</span>
               <span>{product.presentacion}</span>
             </div>
             <div className={styles.divider}></div>
@@ -89,7 +99,7 @@ const ProductPage = ({ data }) => {
                 className={styles.button}
                 onClick={() => addProductToCart()}
               >
-                Ordenar Medicamento
+                {t("productPage.order")}
               </button>
             </div>
           </div>
@@ -97,8 +107,7 @@ const ProductPage = ({ data }) => {
         <div className={styles.sectionInfo}>
           <div className={styles.divider}></div>
           <span className={styles.textHealth}>
-            Health Supply puede ayudarte importando o consiguiendo el producto y
-            posteriormente contactando contigo para su posterior entrega.
+           {t("productPage.description")}:
           </span>
           <div className={styles.divider}></div>
         </div>
@@ -111,7 +120,7 @@ const ProductPage = ({ data }) => {
       </Layout>
       <Drawer
         drawerStyle={stylesDrawer}
-        title="Lista"
+        title={t("productPage.drawerTitle")}
         placement={"right"}
         closable={true}
         visible={visible}
@@ -120,7 +129,7 @@ const ProductPage = ({ data }) => {
         onClose={() => setVisible(!visible)}
       >
         <Link to={`/shoppingcart`}>
-          <button className={styles.buttonList}>Ver todo</button>
+          <button className={styles.buttonList}>{t("productPage.drawerButton")}</button>
         </Link>
 
         <ProductsSelected products={products} setProducts={setProducts} />
@@ -142,6 +151,17 @@ export const pageQuery = graphql`
       presentacion
       aprobadoPor
       laboratorio
+      locale
+      localizations {
+        data {
+          attributes {
+            slug
+            nombreComercial
+            locale
+            descripcion
+          }
+        }
+      }
       imagen {
         localFile {
           childImageSharp {

@@ -11,6 +11,7 @@ import * as styles from "./products.module.css";
 import ProductsGrid from "./Products-Grid";
 import { useState } from "react";
 import { Select } from "antd";
+import specialityList from "./Speciality-List";
 
 const { Option } = Select;
 
@@ -28,6 +29,7 @@ const ProductGridSection = () => {
       allStrapiSpeciality {
         nodes {
           nombre
+          locale
         }
       }
     }
@@ -35,29 +37,43 @@ const ProductGridSection = () => {
 
   const { t } = useTranslation();
   const i18n = useI18next();
+  const currentLanguage = i18n.language;
+
+  const specialityList = allStrapiSpeciality.nodes.filter(
+    (speciality) => speciality.locale === currentLanguage
+  );
+
+  const productList = allStrapiProduct.nodes.filter(
+      (product) => product.locale === currentLanguage
+  );
+
+
+  const randomKey = () => {
+    return Math.random().toString(36).substring(2, 15) +
+      Math.random().toString(36).substring(2, 15);
+  }
 
   function handleChange(value) {
     setFiltreText(value);
   }
 
-  console.log(allStrapiProduct.nodes);
 
   return (
     <div className={styles.container}>
       <div className={styles.containerTitle}>
-        <span className={styles.title}>BUSCADOR DE MEDICAMENTOS</span>
+        <span className={styles.title}>{t("specialityPage.searchTitle")}</span>
       </div>
 
       <div className={styles.containerActions}>
         <div className={styles.containerSearch}>
           <input
-            placeholder="¿Qué medicamento buscas?"
+            placeholder={t("specialityPage.searchPlaceholder")}
             type="text"
             name="text"
             value={text}
             onChange={(e) => setText(e.target.value)}
           ></input>
-          <button className={styles.searchButton}>Buscar</button>
+          <button className={styles.searchButton}>{t("specialityPage.searchButton")}</button>
         </div>
         <div className={styles.containerFilter}>
           <Select
@@ -67,7 +83,7 @@ const ProductGridSection = () => {
             showSearch
             allowClear
             style={{ width: 293 }}
-            placeholder="Filtrar por"
+            placeholder={t("specialityPage.filterPlaceholder")}
             optionFilterProp="children"
             value={filtreText}
             onChange={handleChange}
@@ -80,7 +96,7 @@ const ProductGridSection = () => {
                 .localeCompare(optionB.children.toLowerCase())
             }
           >
-            {allStrapiSpeciality.nodes.map((speciality) => (
+            {specialityList.map((speciality) => (
               <Option value={speciality.nombre}>{speciality.nombre}</Option>
             ))}
           </Select>
@@ -88,9 +104,8 @@ const ProductGridSection = () => {
         </div>
       </div>
       <ProductsGrid
-        products={allStrapiProduct.nodes}
+        products={productList}
         search={text}
-        key={text}
         filtre={filtreText}
       />
     </div>

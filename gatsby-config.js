@@ -18,6 +18,11 @@ module.exports = {
         collectionTypes: [
           {
             singularName: "product",
+            pluginOptions: {
+              i18n: {
+                locale: "all", // Fetch all localizations
+              },
+            },
           },
           {
             singularName: "label",

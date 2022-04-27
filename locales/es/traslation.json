@@ -90,5 +90,52 @@
     "paciente": "Soy un paciente",
     "profesional": "Soy un profesional de la salud",
     "boton": "Enviar"
-  }
+  },
+  "specialityPage": {
+    "title": "ESPECIALIDAD",
+    "searchTitle": "BUSCADOR DE MEDICAMENTOS",
+    "searchPlaceholder": "¿Qué medicamentos buscas?",
+    "filterPlaceholder": "Filtrar por",
+    "searchButton": "Buscar",
+    "textNoResults": "No se encuentran resultados con tu busqueda. El medicamento no existe",
+    "buttonProduct": "Ver medicamento"
+  },
+  "productPage": {
+    "laboratory": "LABORATORIO",
+    "presentation": "PRESENTACIÓN",
+    "order": "Ordenar Medicamento",
+    "description": "Health Supply puede ayudarte importando o consiguiendo el producto y posteriormente contactando contigo para su posterior entrega.",
+    "tab1": "DESCRIPCIÓN",
+    "tab2": "DETALLES - FICHA DE DATOS",
+    "tab3": "DATOS DE CONTACTO",
+    "drawerTitle": "Lista",
+    "drawerButton": "Ver todo"
+  },
+  "DescriptionTab": {
+    "capsulesTitle": "Las capsulas: ",
+    "capsulesDescription": "son pequeños envases solubles generalmente fabricados a base de gelatina en cuyo interior se halla la dosis del fármaco que se administrará por vía oral.",
+    "tablet2Title": "Los comprimidos: ",
+    "tablet2Description": " son formas farmacéuticas sólidas, generalmente redondas, con una dosificación exacta del medicamento contenido en su interior.",
+    "pillTitle": "La pastilla: ",
+    "pillDescription": "es un término coloquial que se le da en a la actualidad a las tabletas y se define como forma farmacéutica sólida de dosificación unitaria, preparadas por moldeo o compresión que contiene principio activo y excipientes",
+    "tabletTitle": "Las tabletas: ",
+    "tabletDescription": "son formas farmacéuticas sólidas de dosificación unitaria, obtenidas por compresión mecánica de granulados o de mezclas de polvos con uno o varios principios activos, con la adición, en la mayoría de los casos, de diversos excipientes"
+  },
+  "DetailTab": {
+    "speciality": "Especialidad",
+    "presentation": "Presentación Farmacéutica",
+    "laboratory": "Laboratorio",
+    "approved": "Aprobado por"
+  },
+  "ContactTab": {
+    "office": "NUESTRAS OFICINAS",
+    "telephone": "DATOS TELEFONOS"
+  },
+  "ShoppingCart":{
+    "title": "Lista de medicamentos a ordenar",
+    "description": " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus."
+  },
+  "notifications": {
+  "alreadyAdded": "Ya existe este producto en la lista"
+ }
 }

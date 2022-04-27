@@ -3,10 +3,12 @@ import ProductCard from "./Product-Card";
 import * as style from "./ProductsGrid.module.css";
 import { Pagination } from "antd";
 import "antd/dist/antd.css";
+import {useTranslation} from "gatsby-plugin-react-i18next";
 
 const ProductsGrid = ({ products, search, filtre }) => {
   const [minValue, setMinValue] = useState(0);
   const [maxValue, setMaxValue] = useState(6);
+  const { t } = useTranslation();
 
   if (filtre) {
     let filterlist = [];
@@ -50,8 +52,7 @@ const ProductsGrid = ({ products, search, filtre }) => {
         ))}
         {exist && (
           <div className={style.productSearch}>
-            No se encuentran resultados con tu busqueda. El medicamento no
-            existe
+            {t("specialityPage.textNoResults")}
           </div>
         )}
       </div>
