@@ -8,6 +8,8 @@ import { Drawer, InputNumber, message } from "antd";
 import { ProductsSelected } from "../components/ProductsSelected";
 import { useLocalStorage } from "../hooks/useLocaleStorage";
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 const ProductPage = ({ data }) => {
   const { t } = useTranslation();
@@ -36,8 +38,12 @@ const ProductPage = ({ data }) => {
 
   const addProductToCart = () => {
     product.quantity = productQuantity;
-    const index = products.findIndex((item) => item.slug === product.slug);
-    const index2 = products.findIndex((item) => item.localizations.data[0].attributes.slug === product.slug);
+    const index = products.findIndex(
+        (item) => item.slug === product.slug
+    );
+    const index2 = products.findIndex(
+        (item) => item.localizations.data[0]?.attributes?.slug === product.slug
+    );
 
     if (index === -1 && index2 === -1) {
       setProducts([...products, product]);
@@ -113,11 +119,46 @@ const ProductPage = ({ data }) => {
           <div className={styles.divider}></div>
         </div>
         <ProductTabsSection product={product} />
-        <div className={styles.brands}>
-          <StaticImage src={MHRA} alt="Bed" />
-          <StaticImage src={EMA} alt="S" />
-          <StaticImage src={FDA} alt="SA" />
-        </div>
+        <Row className="pb-4">
+          <Col md={12} className="nopadding px-0">
+            <div className="logos-bar">
+              <Row className="d-flex justify-content-center pb-3 pb-md-4">
+                <Col xs={4} md={2} className="my-auto">
+                  <figure className="logo-img">
+                    <StaticImage
+                        alt="mhra logo"
+                        src="../images/mhra-logo.png"
+                        style={{ height: "100%", width: "100%" }}
+                        imgStyle={{ objectFit: "contain" }}
+                    />
+                  </figure>
+                </Col>
+                <Col md={1} className="d-none d-sm-block"></Col>
+                <Col xs={4} md={2} className="my-auto">
+                  <figure className="logo-img">
+                    <StaticImage
+                        alt="ema logo"
+                        src="../images/ema-logo.png"
+                        style={{ height: "100%", width: "100%" }}
+                        imgStyle={{ objectFit: "contain" }}
+                    />
+                  </figure>
+                </Col>
+                <Col md={1} className="d-none d-sm-block"></Col>
+                <Col xs={4} md={2} className="my-auto">
+                  <figure className="logo-img">
+                    <StaticImage
+                        alt="fda logo"
+                        src="../images/fda-logo.png"
+                        style={{ height: "100%", width: "100%" }}
+                        imgStyle={{ objectFit: "contain" }}
+                    />
+                  </figure>
+                </Col>
+              </Row>
+            </div>
+          </Col>
+        </Row>
       </Layout>
       <Drawer
         drawerStyle={stylesDrawer}

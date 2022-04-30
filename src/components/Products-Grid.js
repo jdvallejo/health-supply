@@ -7,7 +7,7 @@ import {useTranslation} from "gatsby-plugin-react-i18next";
 
 const ProductsGrid = ({ products, search, filtre }) => {
   const [minValue, setMinValue] = useState(0);
-  const [maxValue, setMaxValue] = useState(6);
+  const [maxValue, setMaxValue] = useState(products.length);
   const { t } = useTranslation();
 
   if (filtre) {

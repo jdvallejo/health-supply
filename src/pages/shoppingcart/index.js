@@ -60,8 +60,10 @@ const ProductCard = ({ product, products, setProducts }) => {
   const currentLanguage = i18n.language;
   const [productQuantity, setProductQuantity] = useState(product.quantity);
 
-  if (product.locale !== currentLanguage){
-    product = product.localizations.data[0].attributes
+  if (product.locale !== currentLanguage && product.localizations.data[0]?.attributes){
+    let productChange = product.localizations.data[0]?.attributes;
+    productChange.imagen = product.imagen
+    product = productChange;
   }
 
   const removeProduct = (id) => {

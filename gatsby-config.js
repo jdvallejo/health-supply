@@ -54,6 +54,7 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+'gatsby-plugin-apollo',
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
