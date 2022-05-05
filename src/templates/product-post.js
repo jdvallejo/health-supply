@@ -82,7 +82,7 @@ const ProductPage = ({ data }) => {
             <div className={styles.divider}></div>
             <div>
               <span className={styles.title}>{t("productPage.laboratory")}:</span>
-              <span>{product.aprobadoPor}</span>
+              <span>{product.laboratorio}</span>
             </div>
             <div className={styles.divider}></div>
             <div>
