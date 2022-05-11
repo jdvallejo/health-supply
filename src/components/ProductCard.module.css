@@ -35,12 +35,10 @@
   font-weight: 600;
 }
 .containerImg {
-  height: 50%;
+  max-height: 400px;
+  max-width: 400px;
 }
-.containerImg img {
-  width: 100%;
-  height: 100%;
-}
+
 .containerInfo {
   height: 50%;
   display: flex;
