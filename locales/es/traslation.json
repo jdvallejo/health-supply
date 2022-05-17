@@ -137,5 +137,13 @@
   },
   "notifications": {
   "alreadyAdded": "Ya existe este producto en la lista"
- }
+ },
+  "form": {
+    "successTitle": "¡Gracias por confiar en nosotros!",
+    "successText": "Nos pondremos en contacto contigo pronto.",
+    "errorTitle": "Error al enviar información",
+    "errorText": "Por favor intente en unos minutos...",
+    "notificationTitle": "No se agregaron productos",
+    "notificationText": "Agregue al menos un producto"
+  }
 }

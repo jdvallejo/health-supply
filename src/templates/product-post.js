@@ -193,6 +193,7 @@ export const pageQuery = graphql`
       presentacion
       aprobadoPor
       laboratorio
+      strapi_id
       locale
       localizations {
         data {

@@ -137,5 +137,13 @@
   },
   "notifications": {
     "alreadyAdded": "The medicine already exists in your list"
+  },
+  "form": {
+    "successTitle": "Thanks for trusting us!",
+    "successText": "We will contact you soon.",
+    "errorTitle": "Error sending information",
+    "errorText": "Please try in a few minutes...",
+    "notificationTitle": "No products added",
+    "notificationText": "Please add at least one product"
   }
 }

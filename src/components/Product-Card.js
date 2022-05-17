@@ -37,6 +37,7 @@ export const query = graphql`
     descripcion
     position
     locale
+    strapi_id
     especialidades {
       nombre
     }
