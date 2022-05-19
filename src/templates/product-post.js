@@ -193,6 +193,7 @@ export const pageQuery = graphql`
       presentacion
       aprobadoPor
       laboratorio
+      compuestoPrincipal
       strapi_id
       locale
       localizations {
@@ -206,6 +207,7 @@ export const pageQuery = graphql`
         }
       }
       imagen {
+        url
         localFile {
           childImageSharp {
             gatsbyImageData(aspectRatio: 1.77)
