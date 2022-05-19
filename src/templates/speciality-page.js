@@ -55,7 +55,7 @@ const key = Math.random();
         <div className={styles.menu}></div>
         <SpecialitySection speciality={speciality} key={speciality.nombre} />
 
-        <ProductGridSection />
+        <ProductGridSection speciality={speciality.nombre} key={speciality.nombre} />
       </main>
     </Layout>
   );

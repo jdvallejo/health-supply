@@ -15,9 +15,9 @@ import specialityList from "./Speciality-List";
 
 const { Option } = Select;
 
-const ProductGridSection = () => {
+const ProductGridSection = ({speciality}) => {
   const [text, setText] = useState("");
-  const [filtreText, setFiltreText] = useState("");
+  const [filtreText, setFiltreText] = useState(speciality);
 
   const { allStrapiProduct, allStrapiSpeciality } = useStaticQuery(graphql`
     query {

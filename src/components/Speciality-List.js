@@ -11,10 +11,14 @@ const SpecialityList = ({ navbar, specialities }) => {
   const i18n = useI18next();
   const currentLanguage = i18n.language;
 
+  specialities.sort((a, b) => a.nombre > b.nombre && 1 || -1)
+
   //filter specialities by current language
   specialities = specialities.filter(
     (speciality) => speciality.locale === currentLanguage
   );
+
+
 
   return (
     <NavDropdown
