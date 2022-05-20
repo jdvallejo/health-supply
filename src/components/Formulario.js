@@ -70,7 +70,7 @@ const Formulario = () => {
   const [createClient] = useMutation(SAVE_CLIENT);
   const [getClient,result] =  useLazyQuery(GET_CLIENT);
   const [createOrder] = useMutation(SAVE_ORDER);
-  const products = JSON.parse(localStorage.getItem("products"));
+  const products = JSON.parse(typeof window !== 'undefined' && window.localStorage.getItem("products"));
 
   useEffect( () => {
     if (result.data) {
