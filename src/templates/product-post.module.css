@@ -122,13 +122,21 @@
   margin-top: 20px;
 }
 .buttonList{
-background: white;
+background: #005082;
+  box-shadow: #8989894d 10px 10px 10px;;
   border: 1px solid #005082;
   box-sizing: border-box;
-  border-radius: 25px;
-  color: #005082;
+  border-radius: 10px;
+  color: white;
   width: 100%;
 }
+
+.buttonList:hover{
+
+  transform: scale(1.1);
+  transition: all 2s ease-in;
+}
+
 .btnscontainer{
   display: flex;
   flex-direction: row;
@@ -138,6 +146,7 @@ background: white;
   height: 100%;
   gap: 25px;
 }
+
 .numberProduct{
 border: black solid 1px;
 border-radius: 25px 0px 0px 25px;

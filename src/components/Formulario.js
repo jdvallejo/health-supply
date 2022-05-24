@@ -73,7 +73,7 @@ const Formulario = () => {
   const products = JSON.parse(typeof window !== 'undefined' && window.localStorage.getItem("products"));
 
   useEffect( () => {
-    if (result.data) {
+    if (result.data && products !== null ) {
     saveOrder()
     }
 
@@ -85,19 +85,7 @@ const Formulario = () => {
 
   const saveStrapi = async (e) => {
     e.preventDefault();
-    if (products){
       await saveClient()
-    }else{
-      await Swal.fire({
-        title: t("form.notificationTitle"),
-        text: t("form.notificationText"),
-        icon: "info",
-        showCloseButton: true,
-      });
-    }
-
-
-
   }
 
   const saveClient = async () => {
@@ -110,7 +98,7 @@ const Formulario = () => {
           country: pais,
           message: mensaje,
           interest: interes,
-          codeMail: products,
+          codeMail: products? products:{},
         }
       }
     })

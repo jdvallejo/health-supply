@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "../../components/ProductCard.module.css";
+import * as styles from "../../components/ProductCardShopping.module.css";
 import * as secondstyles from "./shoppingcart.module.css";
 import { useLocalStorage } from "../../hooks/useLocaleStorage";
 import { DeleteFilled } from "@ant-design/icons";
@@ -101,12 +101,14 @@ const ProductCard = ({ product, products, setProducts }) => {
             value={productQuantity}
           />
         </div>
-        <div className={styles.containerLabel}>
-          <span className={styles.label}>{product.label?.titulo}</span>
-        </div>
+        { (product.label?.titulo) ?
+              <div className={styles.containerLabel}>
+                <span className={styles.label}>{product.label?.titulo}</span>
+              </div> : <div></div>
+        }
+
         <div>
           <span className={styles.title}>{product.nombreComercial}</span>
-          <p>{product.descripcion}</p>
         </div>
         <button
           onClick={() => removeProduct(product.id)}

@@ -170,11 +170,10 @@ const ProductPage = ({ data }) => {
         width={150}
         onClose={() => setVisible(!visible)}
       >
+        <ProductsSelected products={products} setProducts={setProducts} />
         <Link to={`/shoppingcart`}>
           <button className={styles.buttonList}>{t("productPage.drawerButton")}</button>
         </Link>
-
-        <ProductsSelected products={products} setProducts={setProducts} />
       </Drawer>
     </>
   );

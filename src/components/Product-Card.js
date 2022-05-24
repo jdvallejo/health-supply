@@ -12,9 +12,11 @@ const ProductCard = ({ product }) => {
         <GatsbyImage image={getImage(product.imagen?.localFile)} alt="" />
       </div>
       <div className={styles.containerInfo}>
-        <div className={styles.containerLabel}>
-          <span className={styles.label}>{product.label?.titulo}</span>
-        </div>
+          { (product.label?.titulo) ?
+              <div className={styles.containerLabel}>
+                  <span className={styles.label}>{product.label?.titulo}</span>
+              </div> : <div></div>
+          }
         <div>
           <span className={styles.title}>{product.nombreComercial}</span>
           <p>{product.descripcion}</p>
