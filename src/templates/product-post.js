@@ -73,6 +73,7 @@ const ProductPage = ({ data }) => {
             <GatsbyImage
               image={getImage(product?.imagen?.localFile)}
               className={styles.image}
+              objectFit="contain"
             />
           </div>
           <div className={styles.productInfo}>
