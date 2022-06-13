@@ -28,6 +28,7 @@
   height: 328px;
   filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, 0.13));
   border-radius: 12px;
+  object-fit: contain;
 }
 @media (max-width: 768px) {
   .image {

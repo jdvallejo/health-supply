@@ -54,6 +54,7 @@
 .image {
   max-height: 400px;
   max-width: 400px;
+  object-fit: contain;
 }
 .button {
   background: #014c7c;
