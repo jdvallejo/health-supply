@@ -11,7 +11,7 @@ export const SpecialitySection = ({ speciality }) => {
         <div className={styles.information}>
           <span className={styles.title}>{t('specialityPage.title')} {speciality.nombre}</span>
           <div className={styles.segment}></div>
-          <div>{speciality.descripcion.data.descripcion}</div>
+          <div>{speciality.descripcion.data?.descripcion}</div>
         </div>
         <div className={styles.containerImg}>
           <figure className={styles.image}>
