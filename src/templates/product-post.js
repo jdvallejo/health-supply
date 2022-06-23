@@ -74,12 +74,12 @@ const ProductPage = ({ data }) => {
               image={getImage(product?.imagen?.localFile)}
               className={styles.image}
               objectFit="contain"
-            />
+             alt={product.name}/>
           </div>
           <div className={styles.productInfo}>
             <h1 className={styles.titleProduct}>{product.nombreComercial}</h1>
             <div className={styles.segment}></div>
-            <p className={styles.description}>{product.descripcion}</p>
+            <p>{product.descripcion}</p>
             <div className={styles.divider}></div>
             <div>
               <span className={styles.title}>{t("productPage.laboratory")}:</span>
@@ -119,7 +119,6 @@ const ProductPage = ({ data }) => {
           </span>
           <div className={styles.divider}></div>
         </div>
-        <ProductTabsSection product={product} />
         <Row className="pb-4">
           <Col md={12} className="nopadding px-0">
             <div className="logos-bar">

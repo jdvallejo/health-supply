@@ -1,6 +1,6 @@
 .containerProducts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 50px 70px;
   padding: 21px;
 }
@@ -26,11 +26,15 @@
   justify-content: space-between;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .containerPagination {
   flex-direction: column;
   }
+  .containerProducts{
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
 }
+
 
 .pagination {
 }

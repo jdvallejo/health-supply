@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useLocalStorage } from "../hooks/useLocaleStorage";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import * as styles from "./ProductsSelected.module.css";
+import styles from "./ProductsSelected.module.css";
 import { DeleteOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
 
@@ -14,8 +13,7 @@ export const ProductsSelected = ({ products, setProducts }) => {
             <div className={styles.containerImg}>
               <GatsbyImage
                 image={getImage(product?.imagen?.localFile)}
-                className={styles.image}
-              />
+               alt={product.name}/>
             </div>
             <button
               className={styles.buttonList}

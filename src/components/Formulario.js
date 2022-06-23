@@ -70,7 +70,7 @@ const Formulario = () => {
   const [createClient] = useMutation(SAVE_CLIENT);
   const [getClient,result] =  useLazyQuery(GET_CLIENT);
   const [createOrder] = useMutation(SAVE_ORDER);
-  const products = JSON.parse(typeof window !== 'undefined' && window.localStorage.getItem("products"));
+  let products = JSON.parse(typeof window !== 'undefined' && window.localStorage.getItem("products"));
 
   useEffect( () => {
     if (result.data && products !== null ) {
@@ -140,7 +140,6 @@ const Formulario = () => {
       }
     })
   })
-    console.log(result)
     msgFormStatus()
 
   }
@@ -168,7 +167,11 @@ const Formulario = () => {
           showCloseButton: true,
           icon: "success",
         });
+        localStorage.removeItem('products');
+        products = ''
       }
+
+
   }
 
   return (

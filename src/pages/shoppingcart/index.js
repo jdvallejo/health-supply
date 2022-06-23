@@ -8,6 +8,8 @@ import { useLocalStorage } from "../../hooks/useLocaleStorage";
 import { DeleteFilled } from "@ant-design/icons";
 import { InputNumber } from "antd";
 import { useTranslation, useI18next } from "gatsby-plugin-react-i18next";
+import Formulario from "../../components/Formulario";
+import Menu from "../../components/Menu";
 
 const ShoppingCart = () => {
   const { t } = useTranslation();
@@ -15,27 +17,36 @@ const ShoppingCart = () => {
   const [products, setProducts] = useLocalStorage("products", []);
 
   return (
-    <Layout>
-      <div className={secondstyles.menu}></div>
-      <div className={secondstyles.containerInfo}>
-        <h1 className={secondstyles.title}>{t("ShoppingCart.title")}</h1>
-        <div className={secondstyles.segment}></div>
-        <div>
-          {" "}
-          {t("ShoppingCart.description")}
-        </div>
-      </div>
-      <div className={secondstyles.container}>
-        {products.map((product) => (
+<>
+<Menu />
+  <div className={secondstyles.menu}></div>
+  <div className={secondstyles.containerInfo}>
+    <h1 className={secondstyles.title}>{t("ShoppingCart.title")}</h1>
+    <div className={secondstyles.segment}></div>
+    <div>
+    </div>
+  </div>
+  <div className={secondstyles.containerSection}>
+    <div className={secondstyles.containerForm}>
+      <Formulario />
+    </div>
+
+    <div className={secondstyles.container}>
+
+      {products.map((product) => (
           <ProductCard
-            key={product.id}
-            product={product}
-            products={products}
-            setProducts={setProducts}
+              key={product.id}
+              product={product}
+              products={products}
+              setProducts={setProducts}
           />
-        ))}
-      </div>
-    </Layout>
+      ))}
+    </div>
+  </div>
+
+</>
+
+
   );
 };
 

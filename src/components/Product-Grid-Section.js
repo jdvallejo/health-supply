@@ -48,6 +48,7 @@ const ProductGridSection = ({speciality}) => {
   );
 
 
+
   const randomKey = () => {
     return Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15);
@@ -55,6 +56,11 @@ const ProductGridSection = ({speciality}) => {
 
   function handleChange(value) {
     setFiltreText(value);
+  }
+
+  const textChange = (e) => {
+    setText(e.target.value)
+    setFiltreText('')
   }
 
 
@@ -71,7 +77,7 @@ const ProductGridSection = ({speciality}) => {
             type="text"
             name="text"
             value={text}
-            onChange={(e) => setText(e.target.value)}
+            onChange={textChange}
           ></input>
           <button className={styles.searchButton}>{t("specialityPage.searchButton")}</button>
         </div>
