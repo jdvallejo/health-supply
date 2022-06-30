@@ -43,9 +43,7 @@ export const query = graphql`
     especialidades {
       nombre
     }
-    label {
-      titulo
-    }
+    label
     imagen {
       localFile {
         childImageSharp {
