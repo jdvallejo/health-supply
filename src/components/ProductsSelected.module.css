@@ -1,4 +1,4 @@
-.buttonList{
+.buttonList {
     background: white;
       border: 1px solid #005082;
       box-sizing: border-box;
@@ -7,7 +7,13 @@
       width: 100%;
       font-weight: bold;
     }
-    .product{
+
+.product{
       margin-top: 15px;
       margin-bottom: 15px;
-    }
+}
+
+.containerImg {
+    width: 100%;
+    margin: 0px;
+}

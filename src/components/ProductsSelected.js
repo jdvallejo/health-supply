@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import styles from "./ProductsSelected.module.css";
 import { DeleteOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
+import * as styles from "./ProductsSelected.module.css";
+
 
 export const ProductsSelected = ({ products, setProducts }) => {
   return (
     <div className="products-selected">
       {products.length ? (
         products.map((product) => (
-          <div key={product.id} className={styles.product}>
+          <div key={product?.id} className={styles.product}>
             <div className={styles.containerImg}>
               <GatsbyImage
                 image={getImage(product?.imagen?.localFile)}
