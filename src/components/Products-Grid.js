@@ -59,7 +59,7 @@ const ProductsGrid = ({ products, search, filtre }) => {
       <div className={style.containerPagination}>
         <div className={style.paginationA}>
           <b>Total: </b>
-          {maxValue} de {total}
+          {total} de {maxValue}
         </div>
         {/* <div>
           Pagina
